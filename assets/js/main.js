@@ -94,7 +94,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealElements.forEach(el => revealObserver.observe(el));
 
 // ========== COUNTER ANIMATION ==========
-const counters = document.querySelectorAll('.stat-number, .counter-number');
+const counters = document.querySelectorAll('[data-target]');
 
 const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -127,7 +127,7 @@ function animateCounter(el) {
 
 // ========== TYPING ANIMATION ==========
 const typingText = document.getElementById('typingText');
-const words = ['Every Home', 'Modern Businesses', 'Smart Cities', 'Sustainable Future'];
+const words = ['Homes', 'Farms', 'Businesses', 'Industries'];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -199,25 +199,27 @@ techTabs.forEach(tab => {
 // ========== TESTIMONIAL CAROUSEL ==========
 const testimonialTrack = document.getElementById('testimonialTrack');
 const dots = document.querySelectorAll('.dot');
-let currentSlide = 0;
-const totalSlides = dots.length;
+if (testimonialTrack && dots.length) {
+    let currentSlide = 0;
+    const totalSlides = dots.length;
 
-function goToSlide(index) {
-    currentSlide = index;
-    testimonialTrack.style.transform = `translateX(-${index * 100}%)`;
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
+    function goToSlide(index) {
+        currentSlide = index;
+        testimonialTrack.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToSlide(index));
     });
+
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        goToSlide(currentSlide);
+    }, 5000);
 }
-
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => goToSlide(index));
-});
-
-setInterval(() => {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    goToSlide(currentSlide);
-}, 5000);
 
 // ========== CONTACT FORM ==========
 const contactForm = document.getElementById('contactForm');
