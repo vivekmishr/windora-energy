@@ -43,6 +43,12 @@
 /* Push navbar down below top bar */
 .navbar {
     top: 36px;
+    transition: top 0.3s ease, background 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Snap navbar to top once user scrolls past the top bar */
+.navbar.scrolled {
+    top: 0;
 }
 
 /* ========== HERO BADGES ========== */
@@ -1112,6 +1118,9 @@
     }
     .navbar {
         top: 50px;
+    }
+    .navbar.scrolled {
+        top: 0;
     }
 
     .sectors-grid,
