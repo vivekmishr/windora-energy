@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <defs>
+    <linearGradient id="og-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f4f8"/>
+      <stop offset="100%" stop-color="#d4edda"/>
+    </linearGradient>
+    <linearGradient id="og-blade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#2D9A4B"/>
+    </linearGradient>
+    <linearGradient id="og-pole" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6b7685"/>
+      <stop offset="50%" stop-color="#d0d4dc"/>
+      <stop offset="100%" stop-color="#6b7685"/>
+    </linearGradient>
+    <linearGradient id="og-battery" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2D9A4B"/>
+      <stop offset="100%" stop-color="#1f7838"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="150" cy="200" r="150" fill="url(#og-sky)" opacity="0.6"/>
+
+  <!-- Mountains silhouette (remote site feel) -->
+  <path d="M 0 280 L 60 220 L 100 260 L 150 200 L 200 250 L 250 210 L 300 260 L 300 340 L 0 340 Z"
+        fill="#8a95a5" opacity="0.25"/>
+
+  <!-- Ground -->
+  <ellipse cx="150" cy="360" rx="130" ry="8" fill="#8a95a5" opacity="0.3"/>
+
+  <!-- Vertical turbine (larger, centered left) -->
+  <rect x="92" y="110" width="6" height="245" fill="url(#og-pole)" rx="1"/>
+  <ellipse cx="95" cy="358" rx="20" ry="5" fill="#5a6578"/>
+  <circle cx="95" cy="112" r="6" fill="#2a3a4a"/>
+
+  <!-- Helical blades on turbine -->
+  <g>
+    <path d="M 95 118
+             C 70 160, 115 200, 85 240
+             C 55 280, 115 315, 95 350"
+          stroke="url(#og-blade)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 95 118
+             C 120 160, 75 200, 105 240
+             C 135 280, 75 315, 95 350"
+          stroke="url(#og-blade)" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.85"/>
+    <path d="M 95 118 L 95 350"
+          stroke="#0A2540" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+  </g>
+
+  <!-- Wind swoosh -->
+  <g stroke="#2196F3" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.55">
+    <path d="M 140 170 Q 155 165 170 170"/>
+    <path d="M 135 210 Q 150 205 165 210"/>
+    <path d="M 145 250 Q 160 245 175 250"/>
+  </g>
+
+  <!-- Battery bank on the right -->
+  <g transform="translate(190 220)">
+    <!-- Outer box -->
+    <rect x="0" y="0" width="90" height="130" rx="8" fill="#1a3a5c" stroke="#0A2540" stroke-width="2"/>
+    <rect x="4" y="4" width="82" height="122" rx="6" fill="#2a4e72"/>
+
+    <!-- Battery cells (4 cells stacked) -->
+    <g>
+      <rect x="12" y="14" width="66" height="22" fill="url(#og-battery)" rx="3"/>
+      <rect x="12" y="40" width="66" height="22" fill="url(#og-battery)" rx="3"/>
+      <rect x="12" y="66" width="66" height="22" fill="url(#og-battery)" rx="3"/>
+      <rect x="12" y="92" width="66" height="22" fill="url(#og-battery)" rx="3"/>
+    </g>
+
+    <!-- Level indicators (LEDs) -->
+    <circle cx="74" cy="25" r="2" fill="#3bc061"/>
+    <circle cx="74" cy="51" r="2" fill="#3bc061"/>
+    <circle cx="74" cy="77" r="2" fill="#3bc061"/>
+    <circle cx="74" cy="103" r="2" fill="#ffe082"/>
+
+    <!-- Label -->
+    <text x="45" y="124" text-anchor="middle" fill="white" font-size="7" font-family="Arial, sans-serif" font-weight="600" opacity="0.8">OFF-GRID</text>
+  </g>
+
+  <!-- Connection cable from turbine to battery -->
+  <path d="M 98 320 Q 140 340 190 330" stroke="#2D9A4B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="190" cy="330" r="3" fill="#2D9A4B"/>
+  <circle cx="98" cy="320" r="3" fill="#2D9A4B"/>
+
+  <!-- Lightning bolt icon showing power flow -->
+  <g transform="translate(140 320)">
+    <path d="M 4 -10 L -4 4 L 0 4 L -4 14 L 8 -2 L 3 -2 L 6 -10 Z" fill="#ffc107" stroke="#f57c00" stroke-width="0.5"/>
+  </g>
+</svg>

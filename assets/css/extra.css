@@ -1063,6 +1063,61 @@
     right: 30px;
 }
 
+/* ========== PRODUCT IMAGE ILLUSTRATIONS ========== */
+.product-image-svg {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e8f8ed 100%);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image-svg::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 30%, rgba(45, 154, 75, 0.08), transparent 60%);
+    animation: rotate-bg 20s linear infinite;
+    pointer-events: none;
+}
+
+.product-illustration {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover .product-illustration {
+    transform: scale(1.08) rotate(-2deg);
+}
+
+.product-card:hover .helical-img {
+    animation: gentle-spin 8s linear infinite;
+}
+
+.product-card:hover .tulip-img {
+    animation: gentle-sway 4s ease-in-out infinite;
+}
+
+@keyframes gentle-spin {
+    from { transform: scale(1.08) rotate(0deg); }
+    to { transform: scale(1.08) rotate(360deg); }
+}
+
+@keyframes gentle-sway {
+    0%, 100% { transform: scale(1.08) rotate(-3deg); }
+    50% { transform: scale(1.08) rotate(3deg); }
+}
+
+@keyframes rotate-bg {
+    to { transform: rotate(360deg); }
+}
+
 /* ========== SERVICE AREAS ========== */
 .service-areas {
     background: var(--white);
