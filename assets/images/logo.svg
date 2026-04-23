@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2D9A4B"/>
+      <stop offset="100%" stop-color="#2196F3"/>
+    </linearGradient>
+    <linearGradient id="turbineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a3a5c"/>
+      <stop offset="100%" stop-color="#0A2540"/>
+    </linearGradient>
+    <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3bc061"/>
+      <stop offset="100%" stop-color="#2D9A4B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer circle -->
+  <circle cx="200" cy="170" r="140" fill="none" stroke="url(#circleGradient)" stroke-width="8"/>
+
+  <!-- Wind turbine pole -->
+  <rect x="196" y="110" width="8" height="160" fill="url(#turbineGradient)" rx="2"/>
+
+  <!-- Turbine blades -->
+  <g transform="translate(200, 115)">
+    <ellipse cx="0" cy="-45" rx="12" ry="55" fill="url(#turbineGradient)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-45" rx="12" ry="55" fill="url(#turbineGradient)" transform="rotate(120)"/>
+    <ellipse cx="0" cy="-45" rx="12" ry="55" fill="url(#turbineGradient)" transform="rotate(240)"/>
+    <circle cx="0" cy="0" r="10" fill="#1a3a5c"/>
+  </g>
+
+  <!-- Wind swoosh -->
+  <g opacity="0.85">
+    <path d="M 240 170 Q 270 165 290 180" stroke="#2196F3" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M 245 185 Q 275 180 295 195" stroke="#2196F3" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 250 200 Q 280 195 300 210" stroke="#2196F3" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Left leaf -->
+  <path d="M 110 260 Q 140 220 200 260 Q 170 290 110 260 Z" fill="url(#leafGradient)"/>
+
+  <!-- Right leaf -->
+  <path d="M 290 260 Q 260 220 200 260 Q 230 290 290 260 Z" fill="url(#leafGradient)"/>
+
+  <!-- WINDORA text -->
+  <text x="200" y="335" font-family="Montserrat, Arial, sans-serif" font-size="48" font-weight="900" fill="#0A2540" text-anchor="middle" letter-spacing="2">WIND
+    <tspan fill="url(#leafGradient)">O</tspan>RA
+  </text>
+
+  <!-- ENERGY text -->
+  <g>
+    <line x1="80" y1="360" x2="140" y2="360" stroke="#2D9A4B" stroke-width="2"/>
+    <text x="200" y="368" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="700" fill="#2D9A4B" text-anchor="middle" letter-spacing="8">ENERGY</text>
+    <line x1="260" y1="360" x2="320" y2="360" stroke="#2D9A4B" stroke-width="2"/>
+  </g>
+
+  <!-- Tagline -->
+  <text x="200" y="390" font-family="Montserrat, Arial, sans-serif" font-size="11" font-weight="700" fill="#0A2540" text-anchor="middle" letter-spacing="3">CLEAN ENERGY. GREEN FUTURE.</text>
+</svg>

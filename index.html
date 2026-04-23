@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windora Energy - Clean Energy. Green Future.</title>
+    <meta name="description" content="Windora Energy specializes in vertical axis wind turbines (VAWT) for residential and commercial projects. Harness the power of the wind with cutting-edge technology.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="turbine-loader">
+                <div class="blade blade-1"></div>
+                <div class="blade blade-2"></div>
+                <div class="blade blade-3"></div>
+                <div class="hub"></div>
+            </div>
+            <p class="loader-text">Harnessing the Wind...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="assets/images/logo.svg" alt="Windora Energy" class="logo-img">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#technology" class="nav-link">Technology</a></li>
+                <li class="nav-item"><a href="#residential" class="nav-link">Residential</a></li>
+                <li class="nav-item"><a href="#commercial" class="nav-link">Commercial</a></li>
+                <li class="nav-item"><a href="#benefits" class="nav-link">Benefits</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link cta-btn">Get Quote</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-parallax" data-speed="0.3"></div>
+            <div class="clouds cloud-1"></div>
+            <div class="clouds cloud-2"></div>
+            <div class="clouds cloud-3"></div>
+        </div>
+
+        <div class="animated-turbines">
+            <div class="turbine turbine-left">
+                <div class="turbine-pole"></div>
+                <div class="turbine-rotor">
+                    <div class="vawt-blade vawt-blade-1"></div>
+                    <div class="vawt-blade vawt-blade-2"></div>
+                    <div class="vawt-blade vawt-blade-3"></div>
+                </div>
+            </div>
+            <div class="turbine turbine-right">
+                <div class="turbine-pole"></div>
+                <div class="turbine-rotor">
+                    <div class="vawt-blade vawt-blade-1"></div>
+                    <div class="vawt-blade vawt-blade-2"></div>
+                    <div class="vawt-blade vawt-blade-3"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-tagline fade-in-up">CLEAN ENERGY. GREEN FUTURE.</span>
+                <h1 class="hero-title fade-in-up">
+                    <span class="gradient-text">Vertical Axis</span><br>
+                    Wind Turbines for<br>
+                    <span class="typing-text" id="typingText">Every Home</span>
+                </h1>
+                <p class="hero-subtitle fade-in-up">
+                    Revolutionary VAWT technology that captures wind from any direction.
+                    Quiet, efficient, and beautifully designed for residential and commercial spaces.
+                </p>
+                <div class="hero-buttons fade-in-up">
+                    <a href="#technology" class="btn btn-primary">
+                        <span>Explore Technology</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-play"></i>
+                        <span>Get Free Quote</span>
+                    </a>
+                </div>
+                <div class="hero-stats fade-in-up">
+                    <div class="stat">
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">Installations</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-target="98">0</div>
+                        <div class="stat-label">% Efficiency</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-target="25">0</div>
+                        <div class="stat-label">Year Warranty</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">About Windora</span>
+                <h2 class="section-title">Powering Tomorrow with <span class="gradient-text">Vertical Innovation</span></h2>
+                <p class="section-subtitle">Leading the renewable energy revolution with advanced vertical axis wind turbine technology</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text reveal-left">
+                    <h3>Why Choose Vertical Axis Wind Turbines?</h3>
+                    <p>At Windora Energy, we believe in a future powered by clean, renewable energy. Our cutting-edge vertical axis wind turbines (VAWTs) represent the next generation of wind power technology — designed to work efficiently in urban environments, residential rooftops, and commercial installations.</p>
+                    <p>Unlike traditional horizontal turbines, our VAWTs capture wind from any direction, operate silently, and integrate seamlessly into modern architecture.</p>
+
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-wind"></i></div>
+                            <div class="feature-content">
+                                <h4>Omnidirectional Wind Capture</h4>
+                                <p>Harness wind energy from any direction without needing to rotate</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-volume-mute"></i></div>
+                            <div class="feature-content">
+                                <h4>Ultra-Quiet Operation</h4>
+                                <p>Silent performance perfect for residential neighborhoods</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                            <div class="feature-content">
+                                <h4>Eco-Friendly Design</h4>
+                                <p>Bird-safe, low-impact, and 100% renewable energy source</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual reveal-right">
+                    <div class="turbine-3d">
+                        <div class="vawt-model">
+                            <div class="vawt-base"></div>
+                            <div class="vawt-shaft"></div>
+                            <div class="vawt-blades-container">
+                                <div class="vawt-curved-blade blade-a"></div>
+                                <div class="vawt-curved-blade blade-b"></div>
+                                <div class="vawt-curved-blade blade-c"></div>
+                            </div>
+                            <div class="vawt-top"></div>
+                        </div>
+                        <div class="wind-lines">
+                            <div class="wind-line"></div>
+                            <div class="wind-line"></div>
+                            <div class="wind-line"></div>
+                            <div class="wind-line"></div>
+                            <div class="wind-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Divider -->
+    <section class="parallax-divider parallax-1">
+        <div class="parallax-content">
+            <h2 class="parallax-title reveal">Clean Energy for a <span class="gradient-text-light">Cleaner Planet</span></h2>
+            <p class="parallax-subtitle reveal">Every turbine installed is a step toward a sustainable future</p>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="technology section" id="technology">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Our Technology</span>
+                <h2 class="section-title">Advanced <span class="gradient-text">VAWT Engineering</span></h2>
+                <p class="section-subtitle">Decades of innovation packed into every turbine</p>
+            </div>
+
+            <div class="tech-tabs reveal">
+                <button class="tech-tab active" data-tab="darrieus">Darrieus Design</button>
+                <button class="tech-tab" data-tab="savonius">Savonius Design</button>
+                <button class="tech-tab" data-tab="hybrid">Hybrid Technology</button>
+            </div>
+
+            <div class="tech-content">
+                <div class="tech-panel active" id="darrieus">
+                    <div class="tech-visual">
+                        <div class="tech-animation darrieus-anim">
+                            <div class="darrieus-blade db-1"></div>
+                            <div class="darrieus-blade db-2"></div>
+                            <div class="darrieus-blade db-3"></div>
+                        </div>
+                    </div>
+                    <div class="tech-info">
+                        <h3>Darrieus Vertical Axis Design</h3>
+                        <p>Our Darrieus-style turbines use aerodynamic lift principles similar to aircraft wings. Perfect for high-wind residential and commercial applications.</p>
+                        <ul class="tech-specs">
+                            <li><i class="fas fa-check"></i> Power output: 1-10 kW</li>
+                            <li><i class="fas fa-check"></i> Start-up wind: 2.5 m/s</li>
+                            <li><i class="fas fa-check"></i> Rated wind: 11 m/s</li>
+                            <li><i class="fas fa-check"></i> Efficiency: up to 40%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tech-panel" id="savonius">
+                    <div class="tech-visual">
+                        <div class="tech-animation savonius-anim">
+                            <div class="savonius-half sav-1"></div>
+                            <div class="savonius-half sav-2"></div>
+                        </div>
+                    </div>
+                    <div class="tech-info">
+                        <h3>Savonius Drag-Based Design</h3>
+                        <p>Drag-based turbines that excel in low-wind conditions. Ideal for urban environments and locations with variable wind patterns.</p>
+                        <ul class="tech-specs">
+                            <li><i class="fas fa-check"></i> Power output: 0.5-5 kW</li>
+                            <li><i class="fas fa-check"></i> Start-up wind: 1.5 m/s</li>
+                            <li><i class="fas fa-check"></i> Self-starting capability</li>
+                            <li><i class="fas fa-check"></i> Works in turbulent winds</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tech-panel" id="hybrid">
+                    <div class="tech-visual">
+                        <div class="tech-animation hybrid-anim">
+                            <div class="hybrid-outer">
+                                <div class="darrieus-blade db-1"></div>
+                                <div class="darrieus-blade db-2"></div>
+                                <div class="darrieus-blade db-3"></div>
+                            </div>
+                            <div class="hybrid-inner">
+                                <div class="savonius-half sav-1"></div>
+                                <div class="savonius-half sav-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-info">
+                        <h3>Hybrid Darrieus-Savonius</h3>
+                        <p>The best of both worlds — combining lift and drag principles for maximum efficiency across all wind conditions. Our flagship technology.</p>
+                        <ul class="tech-specs">
+                            <li><i class="fas fa-check"></i> Power output: 2-20 kW</li>
+                            <li><i class="fas fa-check"></i> Start-up wind: 1.8 m/s</li>
+                            <li><i class="fas fa-check"></i> Efficiency: up to 45%</li>
+                            <li><i class="fas fa-check"></i> Self-starting + high performance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Residential Section -->
+    <section class="residential section" id="residential">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Residential Solutions</span>
+                <h2 class="section-title">Power Your <span class="gradient-text">Home</span> With the Wind</h2>
+                <p class="section-subtitle">Cut your electricity bills and carbon footprint with our home VAWT systems</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card reveal">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image">
+                        <div class="product-turbine mini">
+                            <div class="product-blade"></div>
+                            <div class="product-blade"></div>
+                            <div class="product-blade"></div>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Windora Home 1.5</h3>
+                        <p class="product-power">1.5 kW</p>
+                        <p class="product-desc">Perfect for small homes and apartments with modest energy needs</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-home"></i> Ideal for homes up to 2,000 sq ft</li>
+                            <li><i class="fas fa-bolt"></i> Annual output: ~2,500 kWh</li>
+                            <li><i class="fas fa-ruler-vertical"></i> Height: 3m</li>
+                            <li><i class="fas fa-shield-alt"></i> 15-year warranty</li>
+                        </ul>
+                        <a href="#contact" class="product-btn">Get Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="product-card featured reveal">
+                    <div class="product-badge">Best Seller</div>
+                    <div class="product-image">
+                        <div class="product-turbine">
+                            <div class="product-blade"></div>
+                            <div class="product-blade"></div>
+                            <div class="product-blade"></div>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Windora Home 3.0</h3>
+                        <p class="product-power">3.0 kW</p>
+                        <p class="product-desc">Our most popular residential model for medium-sized homes</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-home"></i> Ideal for homes up to 4,000 sq ft</li>
+                            <li><i class="fas fa-bolt"></i> Annual output: ~5,500 kWh</li>
+                            <li><i class="fas fa-ruler-vertical"></i> Height: 5m</li>
+                            <li><i class="fas fa-shield-alt"></i> 20-year warranty</li>
+                        </ul>
+                        <a href="#contact" class="product-btn">Get Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="product-card reveal">
+                    <div class="product-badge">Premium</div>
+                    <div class="product-image">
+                        <div class="product-turbine large">
+                            <div class="product-blade"></div>
+                            <div class="product-blade"></div>
+                            <div class="product-blade"></div>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Windora Home 5.0</h3>
+                        <p class="product-power">5.0 kW</p>
+                        <p class="product-desc">Maximum power for large homes and luxury estates</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-home"></i> Ideal for homes 4,000+ sq ft</li>
+                            <li><i class="fas fa-bolt"></i> Annual output: ~9,000 kWh</li>
+                            <li><i class="fas fa-ruler-vertical"></i> Height: 7m</li>
+                            <li><i class="fas fa-shield-alt"></i> 25-year warranty</li>
+                        </ul>
+                        <a href="#contact" class="product-btn">Get Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commercial Section -->
+    <section class="commercial section" id="commercial">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Commercial Solutions</span>
+                <h2 class="section-title">Industrial-Grade <span class="gradient-text">Wind Power</span></h2>
+                <p class="section-subtitle">Scale your business with sustainable energy that pays for itself</p>
+            </div>
+
+            <div class="commercial-grid">
+                <div class="commercial-card reveal-left">
+                    <div class="commercial-icon"><i class="fas fa-building"></i></div>
+                    <h3>Office Buildings</h3>
+                    <p>Rooftop VAWT arrays that power entire office complexes while adding architectural distinction.</p>
+                    <div class="commercial-specs">
+                        <span>10-100 kW systems</span>
+                        <span>ROI: 5-7 years</span>
+                    </div>
+                </div>
+
+                <div class="commercial-card reveal-up">
+                    <div class="commercial-icon"><i class="fas fa-industry"></i></div>
+                    <h3>Manufacturing</h3>
+                    <p>Heavy-duty installations designed to offset industrial energy consumption and reduce operational costs.</p>
+                    <div class="commercial-specs">
+                        <span>50-500 kW systems</span>
+                        <span>ROI: 4-6 years</span>
+                    </div>
+                </div>
+
+                <div class="commercial-card reveal-right">
+                    <div class="commercial-icon"><i class="fas fa-store"></i></div>
+                    <h3>Retail Centers</h3>
+                    <p>Attractive installations that reduce energy costs while demonstrating your commitment to sustainability.</p>
+                    <div class="commercial-specs">
+                        <span>20-200 kW systems</span>
+                        <span>ROI: 5-8 years</span>
+                    </div>
+                </div>
+
+                <div class="commercial-card reveal-left">
+                    <div class="commercial-icon"><i class="fas fa-warehouse"></i></div>
+                    <h3>Warehouses</h3>
+                    <p>Maximize unused rooftop space with scalable turbine arrays for logistics and storage facilities.</p>
+                    <div class="commercial-specs">
+                        <span>30-300 kW systems</span>
+                        <span>ROI: 4-7 years</span>
+                    </div>
+                </div>
+
+                <div class="commercial-card reveal-up">
+                    <div class="commercial-icon"><i class="fas fa-hotel"></i></div>
+                    <h3>Hospitality</h3>
+                    <p>Eco-certified installations for hotels and resorts seeking green tourism credentials.</p>
+                    <div class="commercial-specs">
+                        <span>25-250 kW systems</span>
+                        <span>ROI: 6-8 years</span>
+                    </div>
+                </div>
+
+                <div class="commercial-card reveal-right">
+                    <div class="commercial-icon"><i class="fas fa-school"></i></div>
+                    <h3>Educational</h3>
+                    <p>Campus-wide solutions for schools, universities, and research institutions.</p>
+                    <div class="commercial-specs">
+                        <span>15-150 kW systems</span>
+                        <span>ROI: 5-7 years</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits section" id="benefits">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Why VAWT?</span>
+                <h2 class="section-title">Advantages of <span class="gradient-text">Vertical Axis</span></h2>
+                <p class="section-subtitle">Why our turbines outperform traditional horizontal designs</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card reveal">
+                    <div class="benefit-number">01</div>
+                    <div class="benefit-icon"><i class="fas fa-compass"></i></div>
+                    <h3>Any Wind Direction</h3>
+                    <p>Capture wind from all 360 degrees without needing to face the wind like horizontal turbines.</p>
+                </div>
+                <div class="benefit-card reveal">
+                    <div class="benefit-number">02</div>
+                    <div class="benefit-icon"><i class="fas fa-volume-down"></i></div>
+                    <h3>Whisper Quiet</h3>
+                    <p>Operating sound levels below 35 dB — quieter than a normal conversation.</p>
+                </div>
+                <div class="benefit-card reveal">
+                    <div class="benefit-number">03</div>
+                    <div class="benefit-icon"><i class="fas fa-dove"></i></div>
+                    <h3>Bird & Bat Safe</h3>
+                    <p>Visible blade patterns and lower tip speeds protect wildlife in your area.</p>
+                </div>
+                <div class="benefit-card reveal">
+                    <div class="benefit-number">04</div>
+                    <div class="benefit-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Easy Maintenance</h3>
+                    <p>Ground-level gearbox and generator access for simple, low-cost servicing.</p>
+                </div>
+                <div class="benefit-card reveal">
+                    <div class="benefit-number">05</div>
+                    <div class="benefit-icon"><i class="fas fa-city"></i></div>
+                    <h3>Urban Friendly</h3>
+                    <p>Compact footprint perfect for rooftops, parking lots, and tight urban spaces.</p>
+                </div>
+                <div class="benefit-card reveal">
+                    <div class="benefit-number">06</div>
+                    <div class="benefit-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <h3>Cost Effective</h3>
+                    <p>Lower installation and maintenance costs mean faster return on investment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">How It Works</span>
+                <h2 class="section-title">Your Journey to <span class="gradient-text">Clean Energy</span></h2>
+                <p class="section-subtitle">Simple 4-step process from consultation to clean power</p>
+            </div>
+
+            <div class="process-timeline">
+                <div class="process-step reveal">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Consultation</h3>
+                    <p>Free site assessment and personalized energy needs analysis</p>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step reveal">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-drafting-compass"></i></div>
+                    <h3>Custom Design</h3>
+                    <p>Engineering team designs optimal VAWT system for your location</p>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step reveal">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Installation</h3>
+                    <p>Professional installation by certified technicians in 1-3 days</p>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step reveal">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Power On</h3>
+                    <p>Start generating clean energy and watch your savings grow</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Our <span class="gradient-text">Clients Say</span></h2>
+            </div>
+            <div class="testimonial-carousel">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">Installing the Windora Home 3.0 was the best decision we made. Our electricity bills dropped by 70% and the turbine looks like a piece of art on our property.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SM</div>
+                            <div class="author-info">
+                                <h4>Sarah Mitchell</h4>
+                                <span>Homeowner, California</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">We installed a 100kW commercial array on our manufacturing facility. ROI in just 5 years and our green credentials helped us win major contracts.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RJ</div>
+                            <div class="author-info">
+                                <h4>Robert Johnson</h4>
+                                <span>CEO, EcoManufacturing Corp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">The quietness is remarkable. Our neighbors didn't even know we had a turbine until we showed them. Windora's team was professional throughout.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AP</div>
+                            <div class="author-info">
+                                <h4>Aisha Patel</h4>
+                                <span>Homeowner, Texas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Start Your <span class="gradient-text">Clean Energy</span> Journey</h2>
+                <p class="section-subtitle">Request a free consultation and custom quote today</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <h3>Let's Build Your Future</h3>
+                    <p>Our team of experts is ready to help you transition to clean, renewable energy. Get in touch for a free consultation.</p>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h4>Visit Us</h4>
+                            <p>Windora, Ganesh Darshan Building,<br>Penkarpada, Mira Road East,<br>401107 MH</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-details">
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+919137369043">+91 91373 69043</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:samruddhiagencies56@gmail.com">samruddhiagencies56@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper reveal-right">
+                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/samruddhiagencies56@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Windora Energy Quote Request">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://formsubmit.co/thanks">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="Full Name" required>
+                                <label for="name">Full Name</label>
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="Email" required>
+                                <label for="email">Email Address</label>
+                                <span class="form-line"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="Phone">
+                                <label for="phone">Phone Number</label>
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <select id="project" name="Project Type" required>
+                                    <option value=""></option>
+                                    <option value="Residential">Residential</option>
+                                    <option value="Commercial">Commercial</option>
+                                    <option value="Industrial">Industrial</option>
+                                </select>
+                                <label for="project">Project Type</label>
+                                <span class="form-line"></span>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <textarea id="message" name="Message" rows="4" required></textarea>
+                            <label for="message">Tell us about your project</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/logo.svg" alt="Windora Energy" class="footer-logo">
+                    <p>Leading the renewable energy revolution with innovative vertical axis wind turbine technology for residential and commercial applications.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#residential">Residential</a></li>
+                        <li><a href="#commercial">Commercial</a></li>
+                        <li><a href="#">Industrial</a></li>
+                        <li><a href="#">Government</a></li>
+                        <li><a href="#">Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with the latest in wind energy technology</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Windora Energy. All rights reserved. | Clean Energy. Green Future.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

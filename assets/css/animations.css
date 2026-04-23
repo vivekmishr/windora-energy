@@ -1,0 +1,273 @@
+/* ========== REVEAL ANIMATIONS ========== */
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-up,
+.fade-in-up {
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal {
+    transform: translateY(60px);
+}
+
+.reveal-left {
+    transform: translateX(-80px);
+}
+
+.reveal-right {
+    transform: translateX(80px);
+}
+
+.reveal-up {
+    transform: translateY(80px);
+}
+
+.fade-in-up {
+    transform: translateY(30px);
+}
+
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active,
+.reveal-up.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.fade-in-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger animations */
+.fade-in-up:nth-child(1) { transition-delay: 0.1s; }
+.fade-in-up:nth-child(2) { transition-delay: 0.2s; }
+.fade-in-up:nth-child(3) { transition-delay: 0.3s; }
+.fade-in-up:nth-child(4) { transition-delay: 0.4s; }
+.fade-in-up:nth-child(5) { transition-delay: 0.5s; }
+
+/* ========== HOVER EFFECTS ========== */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+/* ========== FLOATING ANIMATION ========== */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ========== PULSE ANIMATION ========== */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ========== GLOW ANIMATION ========== */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(45, 154, 75, 0.3),
+                    0 0 40px rgba(45, 154, 75, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(45, 154, 75, 0.6),
+                    0 0 60px rgba(45, 154, 75, 0.3);
+    }
+}
+
+.glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* ========== GRADIENT MOVE ========== */
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.gradient-move {
+    background-size: 200% 200%;
+    animation: gradient-shift 5s ease infinite;
+}
+
+/* ========== SHAKE ========== */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* ========== ZOOM IN ========== */
+@keyframes zoom-in {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.zoom-in {
+    animation: zoom-in 0.6s ease-out;
+}
+
+/* ========== SLIDE IN ========== */
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slide-in-left 0.8s ease-out;
+}
+
+.slide-in-right {
+    animation: slide-in-right 0.8s ease-out;
+}
+
+/* ========== TYPING CURSOR ========== */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* ========== WIND WAVE ========== */
+@keyframes wind-wave {
+    0% { transform: translateX(-100%); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(200%); opacity: 0; }
+}
+
+.wind-wave {
+    animation: wind-wave 2s ease-in-out infinite;
+}
+
+/* ========== LEAF FALL ========== */
+@keyframes leaf-fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* ========== SCROLL INDICATOR BAR ========== */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--gradient-accent);
+    z-index: 1001;
+    transition: width 0.1s ease;
+}
+
+/* ========== CURSOR TRAIL (optional enhancement) ========== */
+.cursor-trail {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--green);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease;
+    mix-blend-mode: difference;
+}
+
+/* ========== RIPPLE EFFECT ========== */
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+/* ========== PARALLAX LAYERS ========== */
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+}
+
+/* ========== SECTION FADE DIVIDER ========== */
+.section::before,
+.section::after {
+    pointer-events: none;
+}
+
+/* ========== SMOOTH REVEAL ON SCROLL ========== */
+@keyframes smooth-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.smooth-reveal {
+    animation: smooth-reveal 1s ease-out forwards;
+}
