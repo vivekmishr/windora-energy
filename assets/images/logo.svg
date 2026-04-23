@@ -1,58 +1,133 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
   <defs>
-    <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2D9A4B"/>
+    <!-- Circle ring gradient: green -> blue -->
+    <linearGradient id="ringGrad" x1="0%" y1="10%" x2="100%" y2="10%">
+      <stop offset="0%" stop-color="#3bc061"/>
+      <stop offset="50%" stop-color="#2D9A4B"/>
       <stop offset="100%" stop-color="#2196F3"/>
     </linearGradient>
-    <linearGradient id="turbineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1a3a5c"/>
-      <stop offset="100%" stop-color="#0A2540"/>
+
+    <!-- Turbine blade gradient: deep navy/teal -->
+    <linearGradient id="turbineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e5378"/>
+      <stop offset="100%" stop-color="#0f2d4a"/>
     </linearGradient>
-    <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+
+    <!-- Leaf gradient -->
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4fb96b"/>
+      <stop offset="100%" stop-color="#2D9A4B"/>
+    </linearGradient>
+    <linearGradient id="leafGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#3bc061"/>
+      <stop offset="100%" stop-color="#1f7838"/>
+    </linearGradient>
+
+    <!-- O-swoosh gradient -->
+    <linearGradient id="swooshGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2196F3"/>
       <stop offset="100%" stop-color="#2D9A4B"/>
     </linearGradient>
   </defs>
 
-  <!-- Outer circle -->
-  <circle cx="200" cy="170" r="140" fill="none" stroke="url(#circleGradient)" stroke-width="8"/>
+  <!-- =================== ICON / CIRCLE + TURBINE =================== -->
 
-  <!-- Wind turbine pole -->
-  <rect x="196" y="110" width="8" height="160" fill="url(#turbineGradient)" rx="2"/>
+  <!-- Outer circle ring -->
+  <circle cx="300" cy="220" r="170" fill="none" stroke="url(#ringGrad)" stroke-width="10" stroke-linecap="round"/>
 
-  <!-- Turbine blades -->
-  <g transform="translate(200, 115)">
-    <ellipse cx="0" cy="-45" rx="12" ry="55" fill="url(#turbineGradient)" transform="rotate(0)"/>
-    <ellipse cx="0" cy="-45" rx="12" ry="55" fill="url(#turbineGradient)" transform="rotate(120)"/>
-    <ellipse cx="0" cy="-45" rx="12" ry="55" fill="url(#turbineGradient)" transform="rotate(240)"/>
-    <circle cx="0" cy="0" r="10" fill="#1a3a5c"/>
-  </g>
-
-  <!-- Wind swoosh -->
-  <g opacity="0.85">
-    <path d="M 240 170 Q 270 165 290 180" stroke="#2196F3" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <path d="M 245 185 Q 275 180 295 195" stroke="#2196F3" stroke-width="4" fill="none" stroke-linecap="round"/>
-    <path d="M 250 200 Q 280 195 300 210" stroke="#2196F3" stroke-width="3" fill="none" stroke-linecap="round"/>
-  </g>
-
-  <!-- Left leaf -->
-  <path d="M 110 260 Q 140 220 200 260 Q 170 290 110 260 Z" fill="url(#leafGradient)"/>
-
-  <!-- Right leaf -->
-  <path d="M 290 260 Q 260 220 200 260 Q 230 290 290 260 Z" fill="url(#leafGradient)"/>
-
-  <!-- WINDORA text -->
-  <text x="200" y="335" font-family="Montserrat, Arial, sans-serif" font-size="48" font-weight="900" fill="#0A2540" text-anchor="middle" letter-spacing="2">WIND
-    <tspan fill="url(#leafGradient)">O</tspan>RA
-  </text>
-
-  <!-- ENERGY text -->
+  <!-- Back leaves (left + right) sitting at bottom of circle -->
   <g>
-    <line x1="80" y1="360" x2="140" y2="360" stroke="#2D9A4B" stroke-width="2"/>
-    <text x="200" y="368" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="700" fill="#2D9A4B" text-anchor="middle" letter-spacing="8">ENERGY</text>
-    <line x1="260" y1="360" x2="320" y2="360" stroke="#2D9A4B" stroke-width="2"/>
+    <!-- Left leaf -->
+    <path d="M 170 330
+             Q 195 280 280 300
+             Q 310 340 290 365
+             Q 225 385 170 360 Z"
+          fill="url(#leafGrad)"/>
+    <!-- Leaf vein -->
+    <path d="M 185 340 Q 240 335 285 325" stroke="#1f7838" stroke-width="2.5" fill="none" opacity="0.45" stroke-linecap="round"/>
+
+    <!-- Right leaf (overlapping) -->
+    <path d="M 430 330
+             Q 405 280 320 300
+             Q 290 340 310 365
+             Q 375 385 430 360 Z"
+          fill="url(#leafGrad2)"/>
+    <!-- Leaf vein -->
+    <path d="M 415 340 Q 360 335 315 325" stroke="#1f7838" stroke-width="2.5" fill="none" opacity="0.45" stroke-linecap="round"/>
+  </g>
+
+  <!-- Vertical axis wind turbine: central mast/pole -->
+  <rect x="296" y="230" width="8" height="105" fill="url(#turbineGrad)" rx="3"/>
+  <!-- Hub cap at top of mast -->
+  <circle cx="300" cy="230" r="9" fill="#0f2d4a"/>
+
+  <!-- Three curved/helical blades arranged in 3D perspective around the hub -->
+  <g>
+    <!-- Left blade (curved / helical) -->
+    <path d="M 245 125
+             Q 225 200 255 270
+             L 285 270
+             Q 270 200 280 125 Z"
+          fill="url(#turbineGrad)"/>
+
+    <!-- Center blade (viewed edge-on, narrower) -->
+    <path d="M 295 120
+             L 305 120
+             L 310 270
+             L 290 270 Z"
+          fill="#143955"/>
+
+    <!-- Right blade (curved / helical) -->
+    <path d="M 320 125
+             Q 330 200 320 270
+             L 350 270
+             Q 375 200 355 125 Z"
+          fill="url(#turbineGrad)"/>
+  </g>
+
+  <!-- Small highlight strokes on blades to imply twist -->
+  <g opacity="0.35" stroke="#4a7ca3" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M 260 150 Q 255 200 270 255"/>
+    <path d="M 335 150 Q 345 200 330 255"/>
+  </g>
+
+  <!-- Wind swoosh lines on the right of turbine -->
+  <g fill="none" stroke="#2196F3" stroke-width="6" stroke-linecap="round">
+    <path d="M 375 200 Q 410 185 445 200" opacity="0.95"/>
+    <path d="M 370 225 Q 415 215 455 230" stroke-width="5" opacity="0.8"/>
+    <path d="M 370 250 Q 415 245 450 260" stroke-width="4" opacity="0.65"/>
+    <path d="M 380 268 Q 410 270 435 280" stroke-width="3" opacity="0.5"/>
+  </g>
+
+  <!-- =================== TYPOGRAPHY =================== -->
+
+  <!-- WINDORA -->
+  <g font-family="Montserrat, 'Arial Black', Arial, sans-serif" font-weight="900" text-anchor="middle">
+    <!-- The text split into three parts so we can customize the O -->
+    <text x="300" y="475" font-size="82" fill="#0A2540" letter-spacing="3">
+      <tspan>WIND</tspan><tspan fill="#0A2540" opacity="0">O</tspan><tspan>RA</tspan>
+    </text>
+    <!-- Custom stylized "O" (positioned where the blank O sits) -->
+    <g transform="translate(345 416)">
+      <!-- O outline -->
+      <ellipse cx="0" cy="30" rx="28" ry="34" fill="none" stroke="#0A2540" stroke-width="11"/>
+      <!-- Inner leaf / swoosh -->
+      <path d="M -12 40
+               Q 0 10 18 22
+               Q 10 48 -12 40 Z"
+            fill="url(#swooshGrad)"/>
+    </g>
+    <!-- Tiny green triangle inside the "A" apex (right side) -->
+    <polygon points="420,475 432,452 444,475" fill="#2D9A4B"/>
+  </g>
+
+  <!-- ENERGY with decorative lines -->
+  <g>
+    <line x1="145" y1="520" x2="220" y2="520" stroke="#2D9A4B" stroke-width="3" stroke-linecap="round"/>
+    <line x1="380" y1="520" x2="455" y2="520" stroke="#2D9A4B" stroke-width="3" stroke-linecap="round"/>
+    <text x="300" y="532" font-family="Montserrat, Arial, sans-serif" font-size="38" font-weight="800" fill="#2D9A4B" text-anchor="middle" letter-spacing="12">ENERGY</text>
   </g>
 
   <!-- Tagline -->
-  <text x="200" y="390" font-family="Montserrat, Arial, sans-serif" font-size="11" font-weight="700" fill="#0A2540" text-anchor="middle" letter-spacing="3">CLEAN ENERGY. GREEN FUTURE.</text>
+  <text x="300" y="568" font-family="Montserrat, Arial, sans-serif" font-size="15" font-weight="800" fill="#0A2540" text-anchor="middle" letter-spacing="5">CLEAN ENERGY. GREEN FUTURE.</text>
 </svg>
