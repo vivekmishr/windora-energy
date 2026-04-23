@@ -1063,9 +1063,206 @@
     right: 30px;
 }
 
+/* ========== SERVICE AREAS ========== */
+.service-areas {
+    background: var(--white);
+}
+
+.regions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+.region-card {
+    background: var(--white);
+    padding: 28px 26px;
+    border-radius: 18px;
+    box-shadow: var(--shadow-sm);
+    border: 2px solid var(--gray-light);
+    transition: var(--transition);
+}
+
+.region-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--green);
+}
+
+.region-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--gray-light);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.region-card h3 i {
+    color: var(--green);
+    font-size: 16px;
+}
+
+.city-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 12px;
+}
+
+.city-list li {
+    font-size: 13px;
+    color: var(--gray-dark);
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+}
+
+.city-list li::before {
+    content: '\f3c5';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--green);
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+.region-card:hover .city-list li {
+    color: var(--navy);
+}
+
+.areas-cta {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(45, 154, 75, 0.06), rgba(33, 150, 243, 0.06));
+    border-radius: 20px;
+    border: 2px dashed rgba(45, 154, 75, 0.3);
+}
+
+.areas-cta p {
+    font-size: 18px;
+    color: var(--navy);
+    margin-bottom: 24px;
+}
+
+/* ========== FAQ ========== */
+.faq {
+    background: var(--gray-light);
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 2px solid transparent;
+    overflow: hidden;
+}
+
+.faq-item[open] {
+    border-color: var(--green);
+    box-shadow: var(--shadow-md);
+}
+
+.faq-item summary {
+    padding: 22px 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transition: var(--transition);
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary:hover {
+    background: var(--gray-light);
+}
+
+.faq-item summary i {
+    color: var(--green);
+    font-size: 14px;
+    min-width: 20px;
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary i {
+    transform: rotate(45deg);
+}
+
+.faq-item[open] summary {
+    background: linear-gradient(135deg, rgba(45, 154, 75, 0.05), rgba(33, 150, 243, 0.05));
+    color: var(--green-dark);
+}
+
+.faq-answer {
+    padding: 0 28px 24px;
+    animation: faq-slide 0.4s ease-out;
+}
+
+@keyframes faq-slide {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.faq-answer p {
+    color: var(--gray-dark);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-answer strong {
+    color: var(--navy);
+}
+
+.faq-answer ul {
+    margin: 8px 0 12px 0;
+    padding-left: 20px;
+}
+
+.faq-answer ul li {
+    font-size: 14px;
+    color: var(--gray-dark);
+    line-height: 1.8;
+    list-style: disc;
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1100px) {
     .products-section .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .regions-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -1166,5 +1363,18 @@
 
     .products-section .product-card.featured {
         transform: translateY(0);
+    }
+
+    .regions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-item summary {
+        padding: 18px 20px;
+        font-size: 15px;
+    }
+
+    .faq-answer {
+        padding: 0 20px 20px;
     }
 }

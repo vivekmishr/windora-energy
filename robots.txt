@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Block crawling of git metadata (if accidentally deployed)
+Disallow: /.git/
+
+Sitemap: https://windoraenergy.com/sitemap.xml
