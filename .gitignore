@@ -5,3 +5,9 @@ node_modules/
 *.log
 .vscode/
 .idea/
+
+# Unrelated projects that ended up in this folder
+/rvds/
+/rvds.zip
+/vivek-shops/
+.wrangler/
