@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dde7f0"/>
+      <stop offset="100%" stop-color="#b3c4d8"/>
+    </linearGradient>
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a6877"/>
+      <stop offset="100%" stop-color="#2c3540"/>
+    </linearGradient>
+    <linearGradient id="chargerBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f8fb"/>
+      <stop offset="100%" stop-color="#cfd6df"/>
+    </linearGradient>
+    <linearGradient id="carBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f3f7"/>
+      <stop offset="100%" stop-color="#9aa3ad"/>
+    </linearGradient>
+    <linearGradient id="carWindow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2a3a"/>
+      <stop offset="100%" stop-color="#3c4a5e"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1bbf6a"/>
+      <stop offset="100%" stop-color="#0d8c4d"/>
+    </linearGradient>
+    <radialGradient id="boltGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#9bff9b" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#9bff9b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="700" fill="url(#bgGrad)"/>
+
+  <!-- background buildings -->
+  <g opacity="0.45" fill="#7e8d9e">
+    <rect x="40" y="180" width="120" height="280"/>
+    <rect x="170" y="140" width="90"  height="320"/>
+    <rect x="270" y="200" width="140" height="260"/>
+    <rect x="420" y="120" width="80"  height="340"/>
+    <rect x="510" y="170" width="110" height="290"/>
+    <rect x="630" y="150" width="95"  height="310"/>
+    <rect x="730" y="190" width="130" height="270"/>
+    <rect x="870" y="160" width="80"  height="300"/>
+    <rect x="960" y="130" width="110" height="330"/>
+    <rect x="1080" y="180" width="100" height="280"/>
+  </g>
+  <!-- building windows -->
+  <g fill="#aab8c8" opacity="0.55">
+    <g><rect x="60" y="200" width="14" height="14"/><rect x="90" y="200" width="14" height="14"/><rect x="120" y="200" width="14" height="14"/></g>
+    <g><rect x="60" y="240" width="14" height="14"/><rect x="90" y="240" width="14" height="14"/><rect x="120" y="240" width="14" height="14"/></g>
+    <g><rect x="190" y="170" width="14" height="14"/><rect x="220" y="170" width="14" height="14"/></g>
+    <g><rect x="290" y="220" width="14" height="14"/><rect x="320" y="220" width="14" height="14"/><rect x="350" y="220" width="14" height="14"/><rect x="380" y="220" width="14" height="14"/></g>
+    <g><rect x="540" y="200" width="14" height="14"/><rect x="570" y="200" width="14" height="14"/></g>
+    <g><rect x="660" y="180" width="14" height="14"/><rect x="690" y="180" width="14" height="14"/></g>
+    <g><rect x="760" y="220" width="14" height="14"/><rect x="790" y="220" width="14" height="14"/><rect x="820" y="220" width="14" height="14"/></g>
+    <g><rect x="990" y="160" width="14" height="14"/><rect x="1020" y="160" width="14" height="14"/></g>
+    <g><rect x="1100" y="210" width="14" height="14"/><rect x="1130" y="210" width="14" height="14"/></g>
+  </g>
+
+  <!-- ground -->
+  <rect y="460" width="1200" height="240" fill="url(#groundGrad)"/>
+  <line x1="0" y1="465" x2="1200" y2="465" stroke="#3e4855" stroke-width="2"/>
+
+  <!-- parking line -->
+  <g stroke="#fff" stroke-width="3" opacity="0.55">
+    <line x1="380" y1="640" x2="900" y2="640"/>
+  </g>
+
+  <!-- EV Charger station (left) -->
+  <g transform="translate(170 220)">
+    <!-- shadow -->
+    <ellipse cx="80" cy="430" rx="100" ry="14" fill="#000" opacity="0.25"/>
+    <!-- body -->
+    <rect x="20" y="0" width="140" height="380" rx="14" fill="url(#chargerBody)" stroke="#9aa6b4" stroke-width="2"/>
+    <rect x="20" y="0" width="140" height="60" rx="14" fill="#1c2530"/>
+    <text x="90" y="40" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="22" fill="#1bbf6a" font-weight="900">RVDS</text>
+    <!-- screen -->
+    <rect x="40" y="80" width="100" height="120" rx="8" fill="url(#screenGrad)" stroke="#0a4524" stroke-width="2"/>
+    <!-- bolt icon on screen -->
+    <path d="M95 105 L75 145 L88 145 L82 175 L106 135 L93 135 Z" fill="#fff"/>
+    <!-- screen text -->
+    <rect x="50" y="180" width="80" height="6" rx="3" fill="#0a4524" opacity="0.6"/>
+    <!-- charger plug holster -->
+    <rect x="40" y="220" width="100" height="50" rx="8" fill="#2a3340"/>
+    <circle cx="68" cy="245" r="14" fill="#1bbf6a"/>
+    <path d="M68 233 L60 250 L66 250 L64 260 L76 245 L70 245 Z" fill="#fff"/>
+    <circle cx="112" cy="245" r="14" fill="#1bbf6a"/>
+    <path d="M112 233 L104 250 L110 250 L108 260 L120 245 L114 245 Z" fill="#fff"/>
+    <!-- info pads -->
+    <rect x="40" y="290" width="100" height="14" rx="3" fill="#dee5ee"/>
+    <rect x="40" y="312" width="100" height="14" rx="3" fill="#dee5ee"/>
+    <rect x="40" y="334" width="100" height="14" rx="3" fill="#dee5ee"/>
+    <!-- base -->
+    <rect x="0" y="380" width="180" height="40" rx="4" fill="#3a4453"/>
+    <!-- glow -->
+    <circle cx="90" cy="140" r="80" fill="url(#boltGlow)" opacity="0.4"/>
+
+    <!-- charging cable -->
+    <path d="M170 250 C 240 280, 320 320, 380 320" fill="none" stroke="#0e1418" stroke-width="10" stroke-linecap="round"/>
+    <path d="M170 250 C 240 280, 320 320, 380 320" fill="none" stroke="#1bbf6a" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- EV Car (right side) -->
+  <g transform="translate(530 360)">
+    <!-- shadow -->
+    <ellipse cx="280" cy="240" rx="290" ry="16" fill="#000" opacity="0.35"/>
+    <!-- body lower -->
+    <path d="M0 160 Q40 100 140 90 L240 80 Q320 60 420 70 Q500 76 560 110 L560 180 L0 180 Z" fill="url(#carBody)"/>
+    <!-- roof / window -->
+    <path d="M120 90 Q200 30 320 28 Q420 30 480 86 L470 100 Q380 70 280 70 Q190 70 140 100 Z" fill="url(#carWindow)"/>
+    <!-- belt line -->
+    <path d="M30 130 L540 130" stroke="#5d6976" stroke-width="2"/>
+    <!-- door lines -->
+    <line x1="180" y1="110" x2="180" y2="170" stroke="#5d6976" stroke-width="1.5"/>
+    <line x1="320" y1="105" x2="320" y2="170" stroke="#5d6976" stroke-width="1.5"/>
+    <!-- charge port glowing -->
+    <circle cx="100" cy="118" r="10" fill="#1bbf6a"/>
+    <circle cx="100" cy="118" r="20" fill="url(#boltGlow)"/>
+    <!-- headlight -->
+    <path d="M540 110 Q560 116 560 130" fill="none" stroke="#fff" stroke-width="3"/>
+    <!-- wheels -->
+    <g>
+      <circle cx="120" cy="200" r="38" fill="#0c0f14"/>
+      <circle cx="120" cy="200" r="22" fill="#3a4452"/>
+      <circle cx="120" cy="200" r="6" fill="#1bbf6a"/>
+      <circle cx="440" cy="200" r="38" fill="#0c0f14"/>
+      <circle cx="440" cy="200" r="22" fill="#3a4452"/>
+      <circle cx="440" cy="200" r="6" fill="#1bbf6a"/>
+    </g>
+    <!-- charging cable plug going into car -->
+    <path d="M-150 -90 C -90 -50, -60 -30, 50 30" fill="none" stroke="#0e1418" stroke-width="10" stroke-linecap="round"/>
+    <rect x="48" y="20" width="40" height="22" rx="4" fill="#1c2530"/>
+    <rect x="78" y="22" width="14" height="18" rx="2" fill="#1bbf6a"/>
+  </g>
+
+  <!-- ambient particles / energy -->
+  <g fill="#1bbf6a" opacity="0.7">
+    <circle cx="320" cy="320" r="3"/>
+    <circle cx="360" cy="290" r="2"/>
+    <circle cx="400" cy="340" r="2.5"/>
+    <circle cx="450" cy="310" r="2"/>
+    <circle cx="500" cy="280" r="3"/>
+    <circle cx="540" cy="320" r="2"/>
+  </g>
+</svg>

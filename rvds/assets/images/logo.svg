@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 110" width="320" height="110">
+  <defs>
+    <linearGradient id="speedGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e4a9e"/>
+      <stop offset="55%" stop-color="#cf2027"/>
+      <stop offset="100%" stop-color="#cf2027"/>
+    </linearGradient>
+    <linearGradient id="needleGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cf2027"/>
+      <stop offset="100%" stop-color="#ff6a00"/>
+    </linearGradient>
+  </defs>
+  <!-- speedometer arc -->
+  <g transform="translate(50,55)">
+    <path d="M -38 6 A 38 38 0 0 1 38 6" fill="none" stroke="url(#speedGrad)" stroke-width="6" stroke-linecap="round"/>
+    <!-- tick marks -->
+    <g stroke="#1e4a9e" stroke-width="2" stroke-linecap="round">
+      <line x1="-30" y1="-14" x2="-26" y2="-10"/>
+      <line x1="-14" y1="-26" x2="-12" y2="-22"/>
+      <line x1="2" y1="-30" x2="2" y2="-26"/>
+      <line x1="18" y1="-26" x2="16" y2="-22"/>
+      <line x1="30" y1="-14" x2="26" y2="-10"/>
+    </g>
+    <!-- needle -->
+    <line x1="0" y1="6" x2="22" y2="-18" stroke="url(#needleGrad)" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="0" cy="6" r="4" fill="#1e4a9e"/>
+    <circle cx="0" cy="6" r="1.6" fill="#fff"/>
+  </g>
+  <!-- RVDS wordmark -->
+  <text x="105" y="62" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="42" fill="#cf2027" letter-spacing="2">RVDS</text>
+  <text x="105" y="82" font-family="Arial, sans-serif" font-weight="700" font-size="9" fill="#1e4a9e" letter-spacing="1.4">RVDS TECHNOLOGY INDIA PRIVATE LIMITED</text>
+</svg>

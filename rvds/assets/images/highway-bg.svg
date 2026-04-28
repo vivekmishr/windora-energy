@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="hwSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#091a36"/>
+      <stop offset="60%" stop-color="#0e2a52"/>
+      <stop offset="100%" stop-color="#163e74"/>
+    </linearGradient>
+    <linearGradient id="hwRoad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2638"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </linearGradient>
+    <radialGradient id="hwGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ff7a00" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff7a00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#hwSky)"/>
+  <!-- glow -->
+  <circle cx="1100" cy="350" r="380" fill="url(#hwGlow)"/>
+  <!-- distant mountains -->
+  <path d="M0 560 L180 440 L320 510 L460 410 L640 520 L820 440 L1000 530 L1180 430 L1380 520 L1600 460 L1600 600 L0 600 Z" fill="#0a1a36" opacity="0.85"/>
+  <!-- road perspective -->
+  <path d="M0 900 L640 560 L960 560 L1600 900 Z" fill="url(#hwRoad)"/>
+  <!-- center stripes -->
+  <g stroke="#f5b300" stroke-width="6" opacity="0.65">
+    <line x1="800" y1="560" x2="800" y2="900" stroke-dasharray="40 30"/>
+  </g>
+  <!-- side rails -->
+  <g stroke="#3a557a" stroke-width="2" opacity="0.55">
+    <line x1="640" y1="560" x2="0"    y2="900"/>
+    <line x1="960" y1="560" x2="1600" y2="900"/>
+  </g>
+</svg>
