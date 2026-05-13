@@ -138,13 +138,91 @@
         {"@type": "City", "name": "Gurgaon"}, {"@type": "City", "name": "Noida"}, {"@type": "City", "name": "Ranchi"},
         {"@type": "City", "name": "Bhubaneswar"}, {"@type": "City", "name": "Kochi"}, {"@type": "City", "name": "Thiruvananthapuram"}
       ],
-      "makesOffer": [
-        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Helical Vertical Axis Wind Turbine"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Tulip Vertical Axis Wind Turbine"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Hybrid Solar + Wind Energy System"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Off-Grid Wind & Solar Power System"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Solar Panels & Rooftop Solar"}}
-      ]
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Windora Energy Products & Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "url": "https://windoraenergy.com/products/helical-vertical-wind-turbine",
+            "priceCurrency": "INR",
+            "price": "300000",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Helical Vertical Axis Wind Turbine",
+              "description": "1-10 kW helical VAWT for Indian homes, rooftops and small businesses. Starts at 1.5 m/s.",
+              "image": "https://windoraenergy.com/assets/images/helical-turbine.png",
+              "brand": {"@type": "Brand", "name": "Windora Energy"},
+              "category": "Wind Turbine"
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://windoraenergy.com/products/tulip-vertical-wind-turbine",
+            "priceCurrency": "INR",
+            "price": "600000",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Tulip Vertical Axis Wind Turbine",
+              "description": "2-15 kW tulip VAWT with high torque at low wind speeds. Bird-safe design.",
+              "image": "https://windoraenergy.com/assets/images/tulip-turbine.png",
+              "brand": {"@type": "Brand", "name": "Windora Energy"},
+              "category": "Wind Turbine"
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://windoraenergy.com/products/hybrid-solar-wind-system",
+            "priceCurrency": "INR",
+            "price": "700000",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hybrid Solar + Wind Energy System Installation",
+              "description": "Combined solar PV and vertical wind turbine systems for 24x7 generation. 3-25 kW.",
+              "image": "https://windoraenergy.com/assets/images/hybrid-system.png",
+              "serviceType": "Hybrid Renewable Energy Installation",
+              "provider": {"@type": "Organization", "name": "Windora Energy"}
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://windoraenergy.com/products/off-grid-wind-system",
+            "priceCurrency": "INR",
+            "price": "500000",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Off-Grid Wind & Solar Power System Installation",
+              "description": "Autonomous wind + solar + battery systems for remote sites, farms, telecom towers. 2-50 kW.",
+              "image": "https://windoraenergy.com/assets/images/offgrid-system.svg",
+              "serviceType": "Off-Grid Power System Installation",
+              "provider": {"@type": "Organization", "name": "Windora Energy"}
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://windoraenergy.com/products/hybrid-solar-wind-system",
+            "priceCurrency": "INR",
+            "price": "250000",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rooftop Solar Panel Installation",
+              "description": "Residential and commercial rooftop solar PV system design, supply and installation across India.",
+              "serviceType": "Solar Panel Installation",
+              "provider": {"@type": "Organization", "name": "Windora Energy"}
+            }
+          }
+        ]
+      }
     }
     </script>
 
