@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wind Turbine ROI Calculator India 2026 — Free Tool | Windora Energy</title>
+    <meta name="description" content="Free wind turbine ROI calculator for India — enter your monthly bill, location, and property type to instantly see system size, cost, savings, and payback period for a Windora system.">
+    <meta name="keywords" content="wind turbine ROI calculator India, wind turbine cost calculator, hybrid solar wind calculator, wind energy payback calculator, residential wind turbine ROI, free wind turbine quote tool">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://windoraenergy.com/tools/wind-energy-roi-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Wind Turbine ROI Calculator India — Free Tool">
+    <meta property="og:description" content="Calculate sizing, cost, savings, and payback for a wind turbine or hybrid system on your Indian property.">
+    <meta property="og:image" content="https://windoraenergy.com/assets/images/hybrid-system.png">
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/extra.css">
+    <link rel="stylesheet" href="../assets/css/subpage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Windora Wind Energy ROI Calculator","url":"https://windoraenergy.com/tools/wind-energy-roi-calculator.html","applicationCategory":"BusinessApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://windoraenergy.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://windoraenergy.com/tools/"},{"@type":"ListItem","position":3,"name":"ROI Calculator","item":"https://windoraenergy.com/tools/wind-energy-roi-calculator.html"}]}</script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3GTX10XW5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N3GTX10XW5');
+    </script>
+    <style>
+        .calc-wrapper { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        .calc-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 36px; margin-top: 60px; }
+        @media(max-width:900px) { .calc-grid { grid-template-columns: 1fr; } }
+        .calc-card { background: var(--white); border-radius: 24px; padding: 36px; box-shadow: var(--shadow-md); }
+        .calc-card h2 { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 24px; }
+        .calc-field { margin-bottom: 22px; }
+        .calc-field label { display: block; font-weight: 600; color: var(--navy); margin-bottom: 8px; font-size: 14px; }
+        .calc-field .hint { font-size: 12px; color: var(--gray-dark); margin-top: 6px; }
+        .calc-field input[type="number"], .calc-field select {
+            width: 100%; padding: 14px 16px; border: 2px solid var(--gray-light); border-radius: 12px;
+            font-size: 16px; font-family: inherit; color: var(--navy);
+            transition: var(--transition);
+        }
+        .calc-field input:focus, .calc-field select:focus { outline: none; border-color: var(--green); }
+        .calc-field .range-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; }
+        .calc-field input[type="range"] { width: 100%; }
+        .calc-field .range-value { font-weight: 700; color: var(--green); min-width: 80px; text-align: right; }
+        .results-empty { text-align: center; padding: 60px 20px; color: var(--gray-dark); }
+        .results-empty i { font-size: 56px; color: var(--green); margin-bottom: 16px; opacity: 0.6; }
+        .result-headline { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+        .result-headline-item { background: linear-gradient(135deg, rgba(45, 154, 75, 0.08), rgba(33, 150, 243, 0.06)); padding: 18px; border-radius: 14px; text-align: center; }
+        .result-headline-item .num { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 900; color: var(--green-dark); line-height: 1; }
+        .result-headline-item .label { font-size: 12px; color: var(--gray-dark); text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; }
+        .result-section { margin-bottom: 24px; }
+        .result-section h3 { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+        .result-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--gray-light); font-size: 14px; }
+        .result-row:last-child { border-bottom: none; }
+        .result-row strong { color: var(--navy); }
+        .result-row .val { color: var(--green-dark); font-weight: 700; }
+        .recommend { background: var(--gradient-primary); color: var(--white); padding: 24px; border-radius: 16px; margin-top: 20px; }
+        .recommend h3 { color: var(--white); margin: 0 0 8px; font-family: 'Montserrat', sans-serif; }
+        .recommend p { color: rgba(255, 255, 255, 0.92); margin-bottom: 16px; font-size: 14px; line-height: 1.7; }
+        .recommend .btn { display: inline-flex; gap: 8px; align-items: center; background: var(--white); color: var(--navy); padding: 12px 22px; border-radius: 30px; font-weight: 600; text-decoration: none; transition: var(--transition); }
+        .recommend .btn:hover { background: var(--green-light); color: var(--white); }
+        .disclaimer { font-size: 12px; color: var(--gray-dark); margin-top: 18px; line-height: 1.6; padding: 14px; background: var(--gray-light); border-radius: 10px; }
+    </style>
+</head>
+<body class="subpage-body">
+
+<div class="top-bar"><div class="top-bar-container"><div class="top-bar-left"><a href="tel:+919137369043"><i class="fas fa-phone-alt"></i> +91 91373 69043</a><a href="mailto:info@windoraenergy.com"><i class="fas fa-envelope"></i> info@windoraenergy.com</a></div><div class="top-bar-right"><span><i class="fas fa-map-marker-alt"></i> Mira Road East, MH 401107</span></div></div></div>
+<nav class="navbar scrolled" id="navbar"><div class="nav-container"><a href="../index.html" class="nav-logo"><img src="../assets/images/logo.png" alt="Windora Energy" class="logo-img"></a><ul class="nav-menu" id="navMenu"><li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li><li class="nav-item"><a href="../index.html#products" class="nav-link">Products</a></li><li class="nav-item"><a href="../index.html#sectors" class="nav-link">Solutions</a></li><li class="nav-item"><a href="../blog/index.html" class="nav-link">Blog</a></li><li class="nav-item"><a href="../index.html#contact" class="nav-link cta-btn">Get Free Site Analysis</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></div></nav>
+
+<section class="subpage-hero">
+    <div class="container">
+        <nav class="breadcrumbs"><a href="../index.html">Home</a><span class="sep">›</span><span class="current">ROI Calculator</span></nav>
+        <span class="subpage-tag">Free Interactive Tool</span>
+        <h1 class="subpage-title">Wind Turbine ROI Calculator — India</h1>
+        <p class="subpage-subtitle">Enter your monthly bill, location, and property type. Instantly see what size Windora system you need, estimated cost, annual savings, and payback period. No signup required.</p>
+    </div>
+</section>
+
+<section style="padding: 60px 0 80px; background: var(--gray-light);">
+    <div class="calc-wrapper">
+        <div class="calc-grid">
+
+            <!-- Inputs -->
+            <div class="calc-card">
+                <h2><i class="fas fa-sliders-h" style="color: var(--green); margin-right: 8px;"></i>Your Site</h2>
+
+                <div class="calc-field">
+                    <label for="bill">Average monthly electricity bill (₹)</label>
+                    <div class="range-row">
+                        <input type="range" id="billRange" min="1000" max="50000" step="500" value="6000">
+                        <div class="range-value" id="billDisplay">₹6,000</div>
+                    </div>
+                    <input type="number" id="bill" min="1000" max="200000" step="500" value="6000" style="margin-top:10px">
+                    <div class="hint">Typical Indian bills: home ₹2k-12k, farm ₹8k-30k, business ₹15k-1L+</div>
+                </div>
+
+                <div class="calc-field">
+                    <label for="tariff">Your electricity tariff (₹ per unit/kWh)</label>
+                    <div class="range-row">
+                        <input type="range" id="tariffRange" min="5" max="16" step="0.5" value="9">
+                        <div class="range-value" id="tariffDisplay">₹9.00</div>
+                    </div>
+                    <div class="hint">Mumbai/Delhi: 10-14 · Pune/Bangalore: 8-11 · Tier-2: 6-9</div>
+                </div>
+
+                <div class="calc-field">
+                    <label for="city">Your city / wind region</label>
+                    <select id="city">
+                        <option value="coastal" data-mult="1.20">Coastal (Mumbai, Chennai, Vizag, Surat)</option>
+                        <option value="plateau" data-mult="1.00" selected>Plateau (Pune, Bangalore, Hyderabad, Indore)</option>
+                        <option value="plains" data-mult="0.95">Plains (Delhi NCR, Lucknow, Jaipur, Ahmedabad)</option>
+                        <option value="hill" data-mult="1.10">Hill / elevated (Ooty, Coorg, Dehradun)</option>
+                        <option value="desert" data-mult="1.25">Desert (Jaisalmer, Bikaner, Jodhpur)</option>
+                        <option value="east" data-mult="0.90">East India (Kolkata, Patna, Ranchi)</option>
+                    </select>
+                    <div class="hint">Wind exposure varies by region — affects annual generation 20-30%</div>
+                </div>
+
+                <div class="calc-field">
+                    <label for="type">Property type</label>
+                    <select id="type">
+                        <option value="home" data-batt="0" selected>Home / Bungalow (grid-tied, no battery)</option>
+                        <option value="home-battery" data-batt="1">Home with battery backup (10 kWh)</option>
+                        <option value="farm" data-batt="1">Farm / Farmhouse (with battery)</option>
+                        <option value="commercial" data-batt="0">Office / Shop / Commercial</option>
+                        <option value="factory" data-batt="0">Factory / Industrial</option>
+                        <option value="offgrid" data-batt="2">Off-Grid Remote Site (large battery)</option>
+                    </select>
+                </div>
+
+                <div class="calc-field">
+                    <label for="system">System preference</label>
+                    <select id="system">
+                        <option value="hybrid" selected>Hybrid Solar + Wind (recommended)</option>
+                        <option value="wind">Wind only (Helical/Tulip)</option>
+                        <option value="solar">Solar only</option>
+                    </select>
+                    <div class="hint">Hybrid gives 24×7 generation; solar-only is cheapest per kW</div>
+                </div>
+
+                <button id="calcBtn" class="btn btn-primary" style="width:100%; justify-content:center; margin-top: 10px;">
+                    <i class="fas fa-calculator"></i><span>Calculate My ROI</span>
+                </button>
+            </div>
+
+            <!-- Results -->
+            <div class="calc-card" id="resultsCard">
+                <h2><i class="fas fa-chart-line" style="color: var(--green); margin-right: 8px;"></i>Your Estimated ROI</h2>
+                <div class="results-empty" id="emptyState">
+                    <i class="fas fa-wind"></i>
+                    <p>Fill in your details on the left and click <strong>Calculate</strong> to see your custom estimate.</p>
+                </div>
+                <div id="resultsContent" style="display:none;">
+                    <div class="result-headline">
+                        <div class="result-headline-item">
+                            <div class="num" id="rPayback">—</div>
+                            <div class="label">Payback period</div>
+                        </div>
+                        <div class="result-headline-item">
+                            <div class="num" id="rLifetime">—</div>
+                            <div class="label">25-yr savings</div>
+                        </div>
+                    </div>
+
+                    <div class="result-section">
+                        <h3>Recommended system</h3>
+                        <div class="result-row"><strong>Size</strong><span class="val" id="rSize">—</span></div>
+                        <div class="result-row"><strong>Configuration</strong><span class="val" id="rConfig">—</span></div>
+                        <div class="result-row"><strong>Battery storage</strong><span class="val" id="rBattery">—</span></div>
+                    </div>
+
+                    <div class="result-section">
+                        <h3>Cost &amp; output</h3>
+                        <div class="result-row"><strong>Installed cost</strong><span class="val" id="rCost">—</span></div>
+                        <div class="result-row"><strong>Annual generation</strong><span class="val" id="rGen">—</span></div>
+                        <div class="result-row"><strong>Annual savings</strong><span class="val" id="rSavings">—</span></div>
+                        <div class="result-row"><strong>Monthly bill reduction</strong><span class="val" id="rReduction">—</span></div>
+                    </div>
+
+                    <div class="recommend">
+                        <h3>Next step</h3>
+                        <p id="recommendText">Get a free site visit to confirm these estimates with actual wind measurement at your location.</p>
+                        <a href="../index.html#contact" class="btn"><i class="fas fa-arrow-right"></i><span>Request Free Site Analysis</span></a>
+                    </div>
+
+                    <div class="disclaimer">
+                        <strong>Note:</strong> Estimates are based on typical Indian conditions and the inputs you provided. Actual generation depends on site-specific wind measurements, tower height, shading, and load profile. Pricing is indicative — we provide a binding written quote after a free site survey. ROI does not include possible state-level subsidies or accelerated depreciation tax benefits, which can reduce payback by 1-3 years for commercial buyers.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="page-cta">
+    <div class="container">
+        <h2>Ready for an Exact Quote?</h2>
+        <p>Free on-site survey replaces this estimate with real measurements and a binding written quote.</p>
+        <div class="page-cta-buttons">
+            <a href="../index.html#contact" class="btn btn-primary"><i class="fas fa-search-location"></i><span>Get Free Site Survey</span></a>
+            <a href="tel:+919137369043" class="btn btn-outline"><i class="fas fa-phone-alt"></i><span>+91 91373 69043</span></a>
+        </div>
+    </div>
+</section>
+
+<a href="https://wa.me/919137369043?text=Hi%20Windora%2C%20I%20used%20your%20ROI%20calculator%20and%20want%20a%20quote." class="float-btn float-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="float-label">Chat on WhatsApp</span></a>
+<a href="tel:+919137369043" class="float-btn float-call" aria-label="Call"><i class="fas fa-phone-alt"></i></a>
+<button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../assets/images/logo.png" alt="Windora Energy" class="footer-logo"><p>Wind &amp; hybrid energy solutions engineered for Indian conditions.</p><p class="footer-tag"><strong>Engineered for Low Wind Performance.</strong></p></div><div class="footer-links"><h4>Products</h4><ul><li><a href="../products/helical-vertical-wind-turbine.html">Helical Turbine</a></li><li><a href="../products/tulip-vertical-wind-turbine.html">Tulip Turbine</a></li><li><a href="../products/hybrid-solar-wind-system.html">Hybrid Solar + Wind</a></li><li><a href="../products/off-grid-wind-system.html">Off-Grid Systems</a></li></ul></div><div class="footer-links"><h4>Resources</h4><ul><li><a href="../blog/index.html">Blog</a></li><li><a href="wind-energy-roi-calculator.html">ROI Calculator</a></li><li><a href="../blog/wind-turbine-price-india.html">Price Guide</a></li></ul></div><div class="footer-contact"><h4>Get in Touch</h4><p><i class="fas fa-map-marker-alt"></i> Mira Road East, MH 401107</p><p><i class="fas fa-phone-alt"></i> <a href="tel:+919137369043">+91 91373 69043</a></p><p><i class="fas fa-envelope"></i> <a href="mailto:info@windoraenergy.com">info@windoraenergy.com</a></p></div></div><div class="footer-bottom"><p>&copy; 2026 Windora Energy. All rights reserved.</p></div></div></footer>
+
+<script>
+(function() {
+    const billRange = document.getElementById('billRange');
+    const billInput = document.getElementById('bill');
+    const billDisplay = document.getElementById('billDisplay');
+    const tariffRange = document.getElementById('tariffRange');
+    const tariffDisplay = document.getElementById('tariffDisplay');
+    const calcBtn = document.getElementById('calcBtn');
+
+    // Two-way sync between bill range and input
+    function fmtINR(n) { return '₹' + n.toLocaleString('en-IN'); }
+    billRange.addEventListener('input', () => { billInput.value = billRange.value; billDisplay.textContent = fmtINR(parseInt(billRange.value)); });
+    billInput.addEventListener('input', () => { billRange.value = Math.min(50000, Math.max(1000, parseInt(billInput.value) || 1000)); billDisplay.textContent = fmtINR(parseInt(billInput.value) || 0); });
+    tariffRange.addEventListener('input', () => { tariffDisplay.textContent = '₹' + parseFloat(tariffRange.value).toFixed(2); });
+
+    function inLakh(n) {
+        if (n >= 100000) return (n / 100000).toFixed(2) + ' lakh';
+        return '₹' + Math.round(n).toLocaleString('en-IN');
+    }
+
+    function calculate() {
+        const bill = parseInt(billInput.value) || 6000;
+        const tariff = parseFloat(tariffRange.value) || 9;
+        const monthlyUnits = bill / tariff;
+        const annualUnits = monthlyUnits * 12;
+
+        const cityEl = document.getElementById('city');
+        const windMult = parseFloat(cityEl.selectedOptions[0].dataset.mult);
+
+        const typeEl = document.getElementById('type');
+        const battTier = parseInt(typeEl.selectedOptions[0].dataset.batt); // 0/1/2
+
+        const sys = document.getElementById('system').value;
+
+        // Target generation: cover 80-90% of consumption (leave buffer)
+        const targetAnnual = annualUnits * 0.85;
+
+        // Output per kW per year by system type (at plateau baseline)
+        // Solar: ~1500 kWh/kW/yr; Wind VAWT residential: ~1500 kWh/kW/yr; Hybrid: weighted average
+        let kwhPerKwYear;
+        let configLabel;
+        let costPerKw;
+        if (sys === 'solar') {
+            kwhPerKwYear = 1500 * windMult;
+            configLabel = 'Solar PV';
+            costPerKw = 55000;
+        } else if (sys === 'wind') {
+            kwhPerKwYear = 1500 * windMult;
+            configLabel = 'Vertical Axis Wind Turbine';
+            costPerKw = 120000;
+        } else {
+            // Hybrid: 60% solar + 40% wind by kW, more total generation
+            kwhPerKwYear = 1700 * windMult;
+            configLabel = 'Hybrid Solar + Wind';
+            costPerKw = 85000;
+        }
+
+        let sizeKw = Math.max(1.5, Math.ceil(targetAnnual / kwhPerKwYear * 2) / 2); // round to nearest 0.5 kW
+        // Cap reasonable sizes
+        sizeKw = Math.min(sizeKw, 100);
+
+        const annualGen = Math.round(sizeKw * kwhPerKwYear);
+        const annualSavings = Math.round(Math.min(annualGen, annualUnits) * tariff);
+        const monthlyReduction = Math.round(annualSavings / 12);
+
+        // Battery cost
+        let batteryKwh = 0;
+        if (battTier === 1) batteryKwh = Math.max(5, Math.round(monthlyUnits / 30 * 0.6)); // ~60% of daily consumption
+        if (battTier === 2) batteryKwh = Math.max(10, Math.round(monthlyUnits / 30 * 2)); // 2 days autonomy
+        const batteryCost = batteryKwh * 50000;
+        const baseCost = sizeKw * costPerKw;
+        // Installation overhead (foundation, electricals, paperwork)
+        const installOverhead = baseCost * 0.18;
+        const totalCost = Math.round(baseCost + installOverhead + batteryCost);
+
+        const paybackYears = totalCost / annualSavings;
+        const paybackText = paybackYears < 1 ? '< 1 year' : paybackYears.toFixed(1) + ' yrs';
+        const lifetimeSavings = annualSavings * 25 - totalCost; // simple sum
+
+        // Recommend Windora model
+        let modelRec;
+        if (sys === 'wind' || sys === 'hybrid') {
+            if (sizeKw <= 2) modelRec = 'Helical 1.5 kW';
+            else if (sizeKw <= 4) modelRec = 'Helical 3 kW';
+            else if (sizeKw <= 7) modelRec = 'Helical 5 kW or Tulip 5 kW';
+            else if (sizeKw <= 12) modelRec = 'Tulip 10 kW';
+            else if (sizeKw <= 17) modelRec = 'Tulip 15 kW or 25 kW Hybrid Array';
+            else modelRec = sizeKw + ' kW custom commercial array';
+            if (sys === 'hybrid') modelRec = 'Hybrid system with ' + modelRec;
+        } else {
+            modelRec = sizeKw + ' kW solar PV';
+        }
+
+        document.getElementById('rPayback').textContent = paybackText;
+        document.getElementById('rLifetime').textContent = lifetimeSavings > 0 ? inLakh(lifetimeSavings) : '—';
+        document.getElementById('rSize').textContent = sizeKw + ' kW';
+        document.getElementById('rConfig').textContent = configLabel + ' — ' + modelRec;
+        document.getElementById('rBattery').textContent = batteryKwh > 0 ? batteryKwh + ' kWh lithium' : 'None (grid-tied)';
+        document.getElementById('rCost').textContent = inLakh(totalCost);
+        document.getElementById('rGen').textContent = annualGen.toLocaleString('en-IN') + ' kWh/year';
+        document.getElementById('rSavings').textContent = inLakh(annualSavings) + '/year';
+        document.getElementById('rReduction').textContent = fmtINR(monthlyReduction) + '/month';
+
+        let recText = '';
+        if (paybackYears <= 5) recText = 'Excellent ROI. Your site is ideal for renewable energy. Get a free survey to confirm and lock in pricing.';
+        else if (paybackYears <= 7) recText = 'Good ROI. Standard payback for Indian residential. A site survey can identify ways to improve generation.';
+        else if (paybackYears <= 10) recText = 'Moderate ROI. We may suggest a slightly larger system or a hybrid configuration to improve payback.';
+        else recText = 'Payback is longer than typical. Consider increasing system size or exploring our hybrid configurations. Free site survey recommended.';
+        document.getElementById('recommendText').textContent = recText;
+
+        document.getElementById('emptyState').style.display = 'none';
+        document.getElementById('resultsContent').style.display = 'block';
+
+        // GA4 event
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'roi_calculator_used', {
+                'monthly_bill': bill,
+                'system_type': sys,
+                'recommended_kw': sizeKw,
+                'payback_years': paybackYears.toFixed(1)
+            });
+        }
+    }
+
+    calcBtn.addEventListener('click', calculate);
+    billDisplay.textContent = fmtINR(parseInt(billRange.value));
+    tariffDisplay.textContent = '₹' + parseFloat(tariffRange.value).toFixed(2);
+})();
+</script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1244,6 +1244,161 @@
     margin-bottom: 24px;
 }
 
+/* ========== TESTIMONIALS ========== */
+.testimonials-section {
+    background: linear-gradient(180deg, var(--white) 0%, var(--gray-light) 100%);
+}
+
+.testi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.testi-card {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+.testi-card::before {
+    content: '\201C';
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    font-family: Georgia, serif;
+    font-size: 80px;
+    line-height: 1;
+    color: var(--green);
+    opacity: 0.12;
+}
+
+.testi-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--green);
+}
+
+.testi-stars {
+    display: flex;
+    gap: 4px;
+    color: #ffb400;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.testi-quote {
+    color: var(--navy);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+    font-style: italic;
+}
+
+.testi-author {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding-top: 16px;
+    border-top: 1px solid var(--gray-light);
+}
+
+.testi-avatar {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.testi-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.testi-info h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0;
+}
+
+.testi-info span {
+    font-size: 12px;
+    color: var(--gray-dark);
+}
+
+.testi-info .testi-system {
+    color: var(--green);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.testi-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 40px;
+    background: var(--gradient-primary);
+    border-radius: 24px;
+    text-align: center;
+    color: var(--white);
+}
+
+.testi-summary-item {
+    color: var(--white);
+}
+
+.testi-summary-num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 6px;
+    background: linear-gradient(135deg, #ffffff, #bfdbfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.testi-summary-num span {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.testi-summary-label {
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.92;
+}
+
+@media (max-width: 1024px) {
+    .testi-grid { grid-template-columns: repeat(2, 1fr); }
+    .testi-summary { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 700px) {
+    .testi-grid { grid-template-columns: 1fr; }
+    .testi-summary { grid-template-columns: 1fr; gap: 20px; padding: 28px; }
+    .testi-summary-num { font-size: 36px; }
+}
+
 /* ========== FAQ ========== */
 .faq {
     background: var(--gray-light);
