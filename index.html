@@ -60,19 +60,30 @@
         gtag('config', 'G-N3GTX10XW5');
     </script>
 
-    <!-- JSON-LD structured data: Organization -->
+    <!-- JSON-LD structured data: Organization (canonical brand identity) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://windoraenergy.com/#organization",
       "name": "Windora Energy",
-      "alternateName": "Windora",
+      "alternateName": ["Windora", "Windora Energy India"],
+      "legalName": "Windora Energy",
       "url": "https://windoraenergy.com",
-      "logo": "https://windoraenergy.com/assets/images/logo.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://windoraenergy.com/assets/images/logo.png",
+        "width": 600,
+        "height": 600
+      },
       "image": "https://windoraenergy.com/assets/images/logo.png",
-      "description": "Windora Energy is India's leading provider of vertical axis wind turbines, solar panels, and hybrid solar-wind green energy solutions for homes, farms and businesses.",
-      "slogan": "Clean Energy. Green Future.",
-      "foundingLocation": "Mira Road East, Maharashtra, India",
+      "description": "Windora Energy — independent Indian renewable energy company specializing in low-wind optimized vertical axis wind turbines, solar panels, and hybrid solar-wind green energy systems for homes, farms, and businesses across India. Engineered for low wind performance.",
+      "disambiguatingDescription": "Windora Energy is an independent renewable energy brand headquartered in Mira Road East, Maharashtra, India. Not affiliated with any other company sharing the 'Windora' name. Founded and operated as a standalone Indian renewable energy specialist focused on vertical axis wind turbines (helical &amp; tulip models), hybrid solar-wind systems, and off-grid power solutions.",
+      "slogan": "Clean Energy. Green Future. — Engineered for Low Wind Performance",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Mira Road East, Maharashtra, India"
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Ganesh Darshan Building, Penkarpada",
@@ -81,6 +92,24 @@
         "postalCode": "401107",
         "addressCountry": "IN"
       },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "knowsAbout": [
+        "Vertical Axis Wind Turbines",
+        "Helical Wind Turbine",
+        "Tulip Wind Turbine",
+        "Hybrid Solar Wind Systems",
+        "Off-Grid Power Systems",
+        "Renewable Energy India",
+        "Low Wind Turbines",
+        "Rooftop Wind Turbines",
+        "Residential Wind Energy",
+        "Solar Panels India",
+        "Green Energy Solutions"
+      ],
+      "keywords": "vertical wind turbine India, helical wind turbine, tulip wind turbine, hybrid solar wind, rooftop wind turbine, low wind turbine India, off-grid power, renewable energy India, green energy, Windora",
       "contactPoint": [{
         "@type": "ContactPoint",
         "telephone": "+91-91373-69043",
@@ -88,7 +117,27 @@
         "email": "info@windoraenergy.com",
         "areaServed": "IN",
         "availableLanguage": ["English", "Hindi", "Marathi"]
-      }]
+      }, {
+        "@type": "ContactPoint",
+        "telephone": "+91-91373-69043",
+        "contactType": "sales",
+        "email": "info@windoraenergy.com",
+        "areaServed": "IN"
+      }],
+      "sameAs": [
+        "https://www.behance.net/windora",
+        "https://www.linkedin.com/company/windora-energy",
+        "https://www.facebook.com/windoraenergy",
+        "https://www.instagram.com/windoraenergy",
+        "https://twitter.com/windoraenergy",
+        "https://www.youtube.com/@windoraenergy"
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "Windora Energy",
+        "logo": "https://windoraenergy.com/assets/images/logo.png",
+        "slogan": "Clean Energy. Green Future."
+      }
     }
     </script>
 
