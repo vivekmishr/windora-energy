@@ -12,6 +12,10 @@
     <meta name="geo.country" content="India">
     <meta name="geo.placename" content="Mumbai, Maharashtra, India">
     <meta name="author" content="Windora Energy">
+    <meta name="application-name" content="Windora Energy">
+    <meta name="apple-mobile-web-app-title" content="Windora Energy">
+    <meta name="copyright" content="Windora Energy">
+    <meta name="publisher" content="Windora Energy">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
     <meta name="distribution" content="global">
@@ -272,14 +276,28 @@
     }
     </script>
 
-    <!-- JSON-LD: WebSite -->
+    <!-- JSON-LD: WebSite (drives Google "Site Name" feature in search results) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": "https://windoraenergy.com/#website",
       "url": "https://windoraenergy.com",
       "name": "Windora Energy",
-      "description": "Vertical axis wind turbines, solar panels, and hybrid green energy solutions across India."
+      "alternateName": ["Windora", "Windora Energy India"],
+      "description": "Windora Energy — vertical axis wind turbines, solar panels, and hybrid green energy solutions across India. Engineered for low wind performance.",
+      "inLanguage": "en-IN",
+      "publisher": {
+        "@id": "https://windoraenergy.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://windoraenergy.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
 
