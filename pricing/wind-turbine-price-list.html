@@ -199,6 +199,267 @@
             .price-table .hide-mobile { display: none; }
             .discount-banner { flex-direction: column; text-align: center; }
         }
+
+        /* Print-only elements — hidden on screen */
+        .print-only { display: none; }
+
+        /* "Download PDF" floating button */
+        .pdf-btn {
+            position: fixed;
+            bottom: 240px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            z-index: 998;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+        }
+        .pdf-btn:hover {
+            transform: scale(1.1) rotate(-5deg);
+            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.6);
+        }
+        .pdf-btn .float-label {
+            position: absolute;
+            right: 72px;
+            top: 50%;
+            transform: translateY(-50%) translateX(10px);
+            background: var(--navy);
+            color: var(--white);
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+        }
+        .pdf-btn .float-label::after {
+            content: '';
+            position: absolute;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 5px solid transparent;
+            border-left-color: var(--navy);
+        }
+        .pdf-btn:hover .float-label {
+            opacity: 1;
+            transform: translateY(-50%) translateX(-10px);
+        }
+        @media (max-width: 768px) {
+            .pdf-btn { bottom: 200px; right: 20px; width: 50px; height: 50px; font-size: 18px; }
+        }
+
+        /* ─────────────────────────────────────────── */
+        /*  PRINT STYLESHEET — clean A4 PDF output    */
+        /* ─────────────────────────────────────────── */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 12mm 14mm 16mm 14mm;
+            }
+            html, body {
+                background: #fff !important;
+                color: #000 !important;
+                font-family: 'Helvetica Neue', Arial, sans-serif;
+                font-size: 10pt;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            /* Hide all UI chrome */
+            .top-bar, .navbar, .footer,
+            .float-btn, .pdf-btn, .back-to-top,
+            .subpage-hero-cta, .page-cta,
+            .discount-banner, .breadcrumbs,
+            details.faq-item, .recommend,
+            .note-box[style*="margin-top:50px"]:last-of-type { display: none !important; }
+
+            /* Hero condensed to small banner */
+            .subpage-hero {
+                background: #fff !important;
+                color: #000 !important;
+                padding: 0 !important;
+                margin-bottom: 8mm;
+                page-break-after: avoid;
+            }
+            .subpage-hero::before { display: none !important; }
+            .subpage-tag {
+                background: none !important;
+                border: none !important;
+                color: #2D9A4B !important;
+                font-size: 9pt;
+                padding: 0;
+                margin-bottom: 4mm;
+                letter-spacing: 1px;
+            }
+            .subpage-title {
+                color: #0A2540 !important;
+                font-size: 20pt !important;
+                margin-bottom: 3mm !important;
+                line-height: 1.2 !important;
+            }
+            .subpage-subtitle {
+                color: #333 !important;
+                font-size: 10pt !important;
+                line-height: 1.5 !important;
+                max-width: none !important;
+                margin-bottom: 0 !important;
+            }
+            .subpage-subtitle strong { color: #0A2540 !important; }
+
+            /* Show print-only header */
+            .print-only { display: block !important; }
+            .print-header {
+                display: flex !important;
+                align-items: center;
+                justify-content: space-between;
+                padding-bottom: 4mm;
+                border-bottom: 2pt solid #0A2540;
+                margin-bottom: 5mm;
+            }
+            .print-header img { height: 16mm; }
+            .print-header .ph-contact {
+                text-align: right;
+                font-size: 9pt;
+                line-height: 1.45;
+                color: #333;
+            }
+            .print-header .ph-contact strong { color: #0A2540; font-size: 11pt; display: block; margin-bottom: 1mm; }
+
+            /* Container resets */
+            .content-section { padding: 0 !important; background: #fff !important; }
+            .container { padding: 0 !important; max-width: none !important; }
+
+            /* Tables — keep readable, slight color */
+            h2 {
+                font-size: 13pt !important;
+                color: #0A2540 !important;
+                margin: 6mm 0 2mm 0 !important;
+                page-break-after: avoid !important;
+            }
+            .price-table, .spec-table {
+                width: 100% !important;
+                border-collapse: collapse !important;
+                margin: 3mm 0 !important;
+                box-shadow: none !important;
+                page-break-inside: avoid !important;
+                border: 0.5pt solid #ccc;
+                font-size: 9pt !important;
+            }
+            .price-table thead, .spec-table thead {
+                background: #0A2540 !important;
+                color: #fff !important;
+            }
+            .price-table th, .spec-table th {
+                background: #0A2540 !important;
+                color: #fff !important;
+                padding: 2mm 2.5mm !important;
+                font-size: 8.5pt !important;
+                text-transform: uppercase;
+                border-right: 0.5pt solid rgba(255, 255, 255, 0.2);
+            }
+            .price-table td, .spec-table td {
+                padding: 2mm 2.5mm !important;
+                font-size: 9.5pt !important;
+                color: #000 !important;
+                border-bottom: 0.4pt solid #ddd !important;
+                border-right: 0.4pt solid #eee !important;
+            }
+            .price-table .size {
+                font-size: 10pt !important;
+                color: #1f7838 !important;
+            }
+            .price-table .price {
+                font-size: 10pt !important;
+                color: #0A2540 !important;
+                font-weight: 800;
+            }
+            .price-table .type-pill {
+                background: #f0f0f0 !important;
+                color: #000 !important;
+                padding: 1pt 4pt;
+                font-size: 8pt;
+            }
+            .price-table .type-pill.e { color: #1565c0 !important; background: #e3f2fd !important; }
+            .price-table .type-pill.h { color: #1f7838 !important; background: #e8f5e9 !important; }
+            .price-table tbody tr.featured { background: #f9fcf7 !important; }
+            .price-table .hide-mobile { display: table-cell !important; }
+
+            /* Show all columns on print */
+            .price-table th.hide-mobile, .price-table td.hide-mobile { display: table-cell !important; }
+
+            /* Notes - simplified */
+            .legend {
+                background: #f7f8fa !important;
+                padding: 2.5mm 3mm !important;
+                box-shadow: none !important;
+                font-size: 8.5pt !important;
+                border: 0.5pt solid #ccc;
+                page-break-inside: avoid;
+            }
+            .legend-item { font-size: 8.5pt !important; }
+            .note-box {
+                background: #fafafa !important;
+                border-left: 2pt solid #2D9A4B !important;
+                padding: 3mm 4mm !important;
+                margin: 4mm 0 !important;
+                page-break-inside: avoid !important;
+                border-radius: 0 !important;
+            }
+            .note-box[style*="e67e22"] {
+                border-left-color: #e67e22 !important;
+                background: #fffaf3 !important;
+            }
+            .note-box h3 {
+                font-size: 10pt !important;
+                margin-bottom: 2mm !important;
+            }
+            .note-box ol li {
+                font-size: 9pt !important;
+                margin-bottom: 1.5mm !important;
+                color: #333 !important;
+            }
+            .note-box ol li strong { color: #0A2540 !important; }
+
+            /* Print footer */
+            .print-footer {
+                display: block !important;
+                position: fixed;
+                bottom: 4mm;
+                left: 0;
+                right: 0;
+                text-align: center;
+                font-size: 8pt;
+                color: #666;
+                padding-top: 2mm;
+                border-top: 0.4pt solid #ccc;
+            }
+            .print-footer strong { color: #0A2540; }
+
+            /* Avoid breaking tables across pages */
+            table, tr { page-break-inside: avoid !important; }
+            thead { display: table-header-group !important; }
+
+            /* Remove all animations */
+            *, *::before, *::after {
+                animation: none !important;
+                transition: none !important;
+                box-shadow: none !important;
+            }
+        }
     </style>
 </head>
 <body class="subpage-body">
@@ -215,12 +476,25 @@
         <div class="subpage-hero-cta">
             <a href="../index.html#contact" class="btn btn-primary"><i class="fas fa-tag"></i><span>Enquire for Discount</span></a>
             <a href="https://wa.me/919137369043?text=Hi%20Windora%2C%20I%20want%20a%20quote%20from%20your%20price%20list." class="btn btn-outline" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i><span>WhatsApp Now</span></a>
+            <button onclick="window.print(); if(typeof gtag!=='undefined'){gtag('event','price_list_pdf_download',{location:'hero'});}" class="btn btn-outline" style="cursor:pointer; border:none; font:inherit;"><i class="fas fa-file-pdf"></i><span>Download PDF</span></button>
         </div>
     </div>
 </section>
 
 <section class="content-section">
     <div class="container">
+
+        <!-- Print-only header (visible only when printing/saving PDF) -->
+        <div class="print-only print-header">
+            <img src="../assets/images/logo.png" alt="Windora Energy">
+            <div class="ph-contact">
+                <strong>Windora Energy</strong>
+                Ganesh Darshan Building, Penkarpada,<br>
+                Mira Road East, MH 401107, India<br>
+                +91 91373 69043 · info@windoraenergy.com<br>
+                windoraenergy.com
+            </div>
+        </div>
 
         <div class="discount-banner">
             <i class="fas fa-tags"></i>
@@ -432,9 +706,20 @@
     </div>
 </section>
 
+<!-- Download as PDF — triggers browser's print → save as PDF -->
+<button class="pdf-btn" onclick="window.print(); if(typeof gtag!=='undefined'){gtag('event','price_list_pdf_download');}" aria-label="Download price list as PDF" title="Download as PDF">
+    <i class="fas fa-file-pdf"></i>
+    <span class="float-label">Download as PDF</span>
+</button>
+
 <a href="https://wa.me/919137369043?text=Hi%20Windora%2C%20I%20want%20a%20quote%20from%20your%20price%20list." class="float-btn float-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="float-label">Chat on WhatsApp</span></a>
 <a href="tel:+919137369043" class="float-btn float-call" aria-label="Call"><i class="fas fa-phone-alt"></i></a>
 <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+<!-- Print footer (visible only when printing) -->
+<div class="print-only print-footer">
+    <strong>Windora Energy</strong> · MRP shown · Discounts on enquiry · GST 5% &amp; installation extra · windoraenergy.com · +91 91373 69043
+</div>
 
 <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="../assets/images/logo.png" alt="Windora Energy" class="footer-logo"><p>Wind &amp; hybrid energy solutions engineered for Indian conditions.</p><p class="footer-tag"><strong>Engineered for Low Wind Performance.</strong></p></div><div class="footer-links"><h4>Products</h4><ul><li><a href="../products/helical-vertical-wind-turbine.html">Helical Turbine</a></li><li><a href="../products/tulip-vertical-wind-turbine.html">Tulip Turbine</a></li><li><a href="../products/hybrid-solar-wind-system.html">Hybrid Solar + Wind</a></li><li><a href="../products/off-grid-wind-system.html">Off-Grid Systems</a></li></ul></div><div class="footer-links"><h4>Resources</h4><ul><li><a href="wind-turbine-price-list.html">Price List</a></li><li><a href="../tools/wind-energy-roi-calculator.html">ROI Calculator</a></li><li><a href="../blog/index.html">Blog &amp; Guides</a></li><li><a href="../resources/index.html">Resources Hub</a></li></ul></div><div class="footer-contact"><h4>Get in Touch</h4><p><i class="fas fa-map-marker-alt"></i> Mira Road East, MH 401107</p><p><i class="fas fa-phone-alt"></i> <a href="tel:+919137369043">+91 91373 69043</a></p><p><i class="fas fa-envelope"></i> <a href="mailto:info@windoraenergy.com">info@windoraenergy.com</a></p></div></div><div class="footer-bottom"><p>&copy; 2026 Windora Energy. All rights reserved.</p></div></div></footer>
 <script src="../assets/js/main.js"></script>
