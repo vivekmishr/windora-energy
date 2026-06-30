@@ -1,10 +1,26 @@
 /* ========== SUBPAGE LAYOUT ========== */
 .subpage-body { padding-top: 0; }
 
+/* Subpage header: a solid, in-flow sticky navbar so it never hides behind the
+   top-bar or turn transparent over the dark hero (it stacks: top-bar > navbar > hero). */
+.subpage-body .navbar {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.97);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-sm);
+    padding: 12px 0;
+}
+.subpage-body .logo-img { height: 50px; }
+.subpage-body .nav-link { color: var(--navy); }
+.subpage-body .nav-link:hover { color: var(--green); }
+.subpage-body .nav-link.cta-btn { color: var(--white); }
+
 .subpage-hero {
     background: linear-gradient(135deg, #0A2540 0%, #1a3a5c 50%, #2D9A4B 100%);
     color: var(--white);
-    padding: 180px 0 80px;
+    padding: 80px 0 80px;
     position: relative;
     overflow: hidden;
 }
