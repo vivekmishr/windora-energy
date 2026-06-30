@@ -197,7 +197,7 @@ TEMPLATE = '''<!DOCTYPE html>
         <div class="content-grid">
             <div class="content-main">
                 <h2>Why Wind Energy Works in @@NAME@@</h2>
-                <p>@@NOTE@@ With annual averages around <strong>@@WINDRANGE@@</strong>, @@NAME@@ is a @@WINDQUALITY@@ fit for Windora's vertical axis wind turbines, which start generating at just 1.5 m/s.</p>
+                <p>@@NOTE@@ With annual averages around <strong>@@WINDRANGE@@</strong>, @@NAME@@ is a @@WINDQUALITY@@ fit for Windora's vertical axis wind turbines, which start generating at just 3.5 m/s.</p>
                 <ul>
                     <li>@@WINDQUALITY_CAP@@ wind resource — @@REGION@@ is among India's stronger wind zones</li>
                     <li>@@DISCOM@@ grid tariffs climb steeply at higher consumption slabs</li>
@@ -240,7 +240,7 @@ TEMPLATE = '''<!DOCTYPE html>
                 <p>All installations include the local @@DISCOM@@ net-metering paperwork, civil works, structural mounting, and 15-25 year warranty.</p>
 
                 <h2>FAQ — Wind Turbine @@NAME@@</h2>
-                <details class="faq-item" style="margin-bottom: 12px;"><summary><span>Is @@NAME@@ windy enough for a small wind turbine?</span><i class="fas fa-plus"></i></summary><div class="faq-answer"><p>@@NOTE@@ Our vertical axis turbines start generating at just 1.5 m/s, so they perform reliably across @@NAME@@ and @@DISTRICT@@ district.</p></div></details>
+                <details class="faq-item" style="margin-bottom: 12px;"><summary><span>Is @@NAME@@ windy enough for a small wind turbine?</span><i class="fas fa-plus"></i></summary><div class="faq-answer"><p>@@NOTE@@ Our vertical axis turbines start generating at just 3.5 m/s, so they perform reliably across @@NAME@@ and @@DISTRICT@@ district.</p></div></details>
                 <details class="faq-item" style="margin-bottom: 12px;"><summary><span>Which DISCOM handles net-metering in @@NAME@@?</span><i class="fas fa-plus"></i></summary><div class="faq-answer"><p>@@DISCOM@@ manages the local grid connection in @@NAME@@. We handle the entire net-metering application and paperwork as part of our turnkey installation.</p></div></details>
                 <details class="faq-item" style="margin-bottom: 12px;"><summary><span>Should I choose wind, solar, or hybrid in @@NAME@@?</span><i class="fas fa-plus"></i></summary><div class="faq-answer"><p>For most @@STATE@@ sites we recommend a hybrid solar+wind system — solar covers sunny afternoons while wind covers evenings, nights, and the monsoon, giving the most consistent year-round output.</p></div></details>
                 <details class="faq-item" style="margin-bottom: 12px;"><summary><span>Can you install off-grid for a remote @@DISTRICT@@ farm?</span><i class="fas fa-plus"></i></summary><div class="faq-answer"><p>Yes. Given the strong @@WINDRANGE@@ wind resource around @@NAME@@, off-grid and battery-backed hybrid systems work very well for remote farms and farmhouses with weak or no grid supply.</p></div></details>

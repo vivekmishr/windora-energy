@@ -168,7 +168,7 @@ CITIES = [
             "<strong>Beyond</strong> — Kanpur, Allahabad, Varanasi (across UP)",
         ],
         "faqs": [
-            ("Is the UP capital windy enough?", "Yes — 3-5 m/s average is well within our turbine's operating range (we start at 1.5 m/s). Pre-monsoon winds are especially strong in central UP."),
+            ("Is the UP capital windy enough?", "Yes — 3-5 m/s average is well within our turbine's operating range (we start at 3.5 m/s). Pre-monsoon winds are especially strong in central UP."),
             ("Can it power my Mohanlalganj farmhouse?", "Yes — periphery farmhouses often have excellent wind exposure. Off-grid hybrid systems are popular here for full energy independence."),
             ("How fast is UPPCL net-metering approval?", "Typically 4-8 weeks. We handle the full application paperwork through UPPCL/MVVNL."),
         ],
@@ -328,7 +328,7 @@ TEMPLATE = '''<!DOCTYPE html>
         <div class="content-grid">
             <div class="content-main">
                 <h2>Why Wind Energy Works in {name}</h2>
-                <p>{geography} That makes {name} a {wind_quality} fit for Windora's vertical axis wind turbines, which start generating at just 1.5 m/s.</p>
+                <p>{geography} That makes {name} a {wind_quality} fit for Windora's vertical axis wind turbines, which start generating at just 3.5 m/s.</p>
                 <ul>
 {factor_items}
                 </ul>
