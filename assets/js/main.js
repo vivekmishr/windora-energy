@@ -235,18 +235,23 @@ if (contactForm) {
 
         try {
             const formData = new FormData(contactForm);
-            const response = await fetch(contactForm.action, {
+            // FormSubmit requires its /ajax/ endpoint for fetch(): it returns JSON and
+            // sends CORS headers. The plain endpoint has no CORS headers, so a cross-origin
+            // fetch is blocked by the browser and always throws (the "Failed" bug).
+            const endpoint = contactForm.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+            const response = await fetch(endpoint, {
                 method: 'POST',
                 body: formData,
                 headers: { 'Accept': 'application/json' }
             });
+            const data = await response.json().catch(() => ({}));
 
-            if (response.ok) {
+            if (response.ok && String(data.success) === 'true') {
                 button.innerHTML = '<i class="fas fa-check"></i> <span>Message Sent!</span>';
                 button.style.background = 'linear-gradient(135deg, #2D9A4B, #3bc061)';
                 contactForm.reset();
             } else {
-                throw new Error('Submit failed');
+                throw new Error(data.message || 'Submit failed');
             }
         } catch (err) {
             button.innerHTML = '<i class="fas fa-exclamation-triangle"></i> <span>Failed — try again</span>';
