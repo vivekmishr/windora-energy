@@ -247,6 +247,16 @@ if (contactForm) {
             if (response.ok && String(data.success) === 'true') {
                 button.innerHTML = '<i class="fas fa-check"></i> <span>Message Sent!</span>';
                 button.style.background = 'linear-gradient(135deg, #2D9A4B, #3bc061)';
+                // GA4 conversion: enquiry form submitted
+                if (typeof gtag === 'function') {
+                    gtag('event', 'generate_lead', {
+                        event_category: 'contact',
+                        event_label: 'enquiry_form',
+                        project_type: formData.get('Project Type') || '',
+                        interested_product: formData.get('Interested Product') || '',
+                        site_location: formData.get('Site Location') || ''
+                    });
+                }
                 contactForm.reset();
             } else {
                 throw new Error(data.message || 'Submit failed');
@@ -263,6 +273,26 @@ if (contactForm) {
         }, 3000);
     });
 }
+
+// ========== ANALYTICS: conversion / interaction events (GA4) ==========
+// One delegated listener catches clicks on WhatsApp, Call, and "Get Free Video
+// Analysis" CTAs across every page. GA4 sends these via sendBeacon, so they
+// survive the navigation to WhatsApp / the dialer.
+(function () {
+    document.addEventListener('click', function (e) {
+        if (typeof gtag !== 'function') return;
+        const link = e.target.closest('a');
+        if (!link) return;
+        const href = link.getAttribute('href') || '';
+        if (/wa\.me|api\.whatsapp\.com/i.test(href)) {
+            gtag('event', 'whatsapp_click', { event_category: 'contact', event_label: 'whatsapp' });
+        } else if (/^tel:/i.test(href)) {
+            gtag('event', 'call_click', { event_category: 'contact', event_label: 'phone' });
+        } else if (href.indexOf('#contact') !== -1) {
+            gtag('event', 'cta_click', { event_category: 'engagement', event_label: 'get_free_video_analysis' });
+        }
+    }, true);
+})();
 
 // ========== RIPPLE EFFECT ON BUTTONS ==========
 document.querySelectorAll('.btn, .product-btn, .cta-btn').forEach(button => {
