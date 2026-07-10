@@ -1096,10 +1096,11 @@
                 </div>
 
                 <div class="contact-form-wrapper reveal-right">
-                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/info@windoraenergy.com" method="POST">
-                        <input type="hidden" name="_subject" value="New Windora Energy Quote Request">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
+                    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="4265c080-e972-4fd9-844e-c4b65d615221">
+                        <input type="hidden" name="subject" value="New Windora Energy Quote Request">
+                        <input type="hidden" name="from_name" value="Windora Energy Website">
+                        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
                         <div class="form-row">
                             <div class="form-group">
                                 <input type="text" id="name" name="Full Name" required>

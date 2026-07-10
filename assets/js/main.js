@@ -235,11 +235,9 @@ if (contactForm) {
 
         try {
             const formData = new FormData(contactForm);
-            // FormSubmit requires its /ajax/ endpoint for fetch(): it returns JSON and
-            // sends CORS headers. The plain endpoint has no CORS headers, so a cross-origin
-            // fetch is blocked by the browser and always throws (the "Failed" bug).
-            const endpoint = contactForm.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
-            const response = await fetch(endpoint, {
+            // Web3Forms AJAX endpoint (api.web3forms.com/submit) returns JSON and sends
+            // CORS headers, so the response can be read reliably from the browser.
+            const response = await fetch(contactForm.action, {
                 method: 'POST',
                 body: formData,
                 headers: { 'Accept': 'application/json' }
