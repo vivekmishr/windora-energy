@@ -237,7 +237,7 @@ if (contactForm) {
             const formData = new FormData(contactForm);
             // Also log the enquiry to the Google Sheet (fire-and-forget). Apps Script has
             // no CORS headers, so use no-cors + url-encoded; the row still gets written.
-            fetch('https://script.google.com/macros/s/AKfycbznPIGnRtnRUIE4EUlGQh4QFJNtW7a11zoldjQOVEJl5t5se4980eC8clqDl58GFK9l/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbx_2PjRMyIFYZv4aIGC8ZmRt8nUG7onCiUKEuC_95sOuxe92zH4jA5QThUmVjDUpNo5/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 body: new URLSearchParams(formData)
