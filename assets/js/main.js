@@ -235,6 +235,13 @@ if (contactForm) {
 
         try {
             const formData = new FormData(contactForm);
+            // Also log the enquiry to the Google Sheet (fire-and-forget). Apps Script has
+            // no CORS headers, so use no-cors + url-encoded; the row still gets written.
+            fetch('https://script.google.com/macros/s/AKfycbznPIGnRtnRUIE4EUlGQh4QFJNtW7a11zoldjQOVEJl5t5se4980eC8clqDl58GFK9l/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                body: new URLSearchParams(formData)
+            }).catch(function () {});
             // Web3Forms AJAX endpoint (api.web3forms.com/submit) returns JSON and sends
             // CORS headers, so the response can be read reliably from the browser.
             const response = await fetch(contactForm.action, {
