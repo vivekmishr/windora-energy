@@ -121,6 +121,8 @@ TEMPLATE = '''<!DOCTYPE html>
                     </tbody>
                 </table>
 
+                <div data-nosnippet>
+
                 <h2>@@NAME@@ Pricing Indicators</h2>
                 <ul>
                     <li><strong>1.5 kW rooftop turbine:</strong> ₹1.8-2.5 lakh</li>
@@ -128,6 +130,8 @@ TEMPLATE = '''<!DOCTYPE html>
                     <li><strong>5 kW Tulip / Hybrid:</strong> ₹6-9 lakh</li>
                     <li><strong>10 kW Hybrid:</strong> ₹14-20 lakh</li>
                 </ul>
+
+                </div>
                 <p>All installations include the local @@DISCOM@@ net-metering paperwork, civil works, structural mounting, and 15-25 year warranty.</p>
 
                 <h2>FAQ — Wind Turbine @@NAME@@</h2>
